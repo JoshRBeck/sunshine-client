@@ -1,16 +1,43 @@
+import { useState, useEffect } from "react";
+import axios from "axios"
+
 function ProfilePage() {
+    const {user, setUser} = useState("")
+    
+    const apiURL = "http://localhost:3000/api/sunshine";
+
+    const getUser = () => {
+    
+        axios
+          .get(apiURL)
+          .then((response) => {
+              const oneUser = response.data;
+              setUser(oneUser);
+            })
+          .catch((error) => console.log(error));
+      };
+
+      useEffect(()=> {
+        getUser();
+      }, [] );
+
     return (
    <div className="ProfilePage">
     <h1>Profile Page</h1>
-    {/* <p>Hello {User.name}, welcome back!</p> */}
-    {/* <h2>Username: {User.name}</h2>
-    <p>E-Mail: {User.email}</p> */}
+    {user && (
+    <>
+    <p>Hello {user.name}, welcome back!</p>
+    <h2>Username: {user.name}</h2>
+    <img src={user.image} alt="User"/>
+    <p>E-Mail: {user.email}</p>
+    </>
+    )}
     <form>
     <label for="description">About me:</label>
     <textarea name="description" id="description" rows="4" cols="20">
     </textarea>
     </form>
-    {/* <img src={User.image} alt="User-Image" /> */}
+
 
 
     <div className="wine-preferences">
