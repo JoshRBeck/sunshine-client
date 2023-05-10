@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar"
 import { Routes, Route } from "react-router-dom"
 import HomePage from './pages/HomePage';
 import ProfilePage from "./pages/ProfilePage"
-import SignupPage from "./page/SignupPage"
-import LoginPage from "./pages/SignupPage"
+import SignupPage from "./pages/SignupPage"
+import LoginPage from "./pages/LoginPage"
 import WineListPage from "./pages/WineListPage"
 import WineListDetailsPage from "./pages/WineListDetailsPage"
 
@@ -18,7 +18,7 @@ function App() {
         <Route path="/" element={<HomePage/>} />
         <Route path="/profile" element={<ProfilePage/>} />
         <Route path="/signup" element={<SignupPage/>} />
-        <Route path="/login" elment={<LoginPage/>} />
+        <Route path="/login" element={<LoginPage/>} />
         <Route path="/wine-list" element={<WineListPage/>} />
         <Route path="/wine-list-details" element={<WineListDetailsPage/>} />
       </Routes>
