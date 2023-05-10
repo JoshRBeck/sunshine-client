@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { response } from "../../../sunshine-server/app";
+// import { response } from "../../../sunshine-server/app";
 const API_URL = "http://localhost:5005";
 
 const AuthContext = React.createContext();
@@ -26,7 +26,7 @@ function AuthProviderWrapper(props) {
       )
         .then((response) => {
           // If the server verifies that the JWT token is valid
-          const user = response.data;
+          const User = response.data;
           // Update store variables
           setLoggedIn(true);
           setLoading(true);
