@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 // import { response } from "../../../sunshine-server/app";
-const API_URL = "http://localhost:5005";
+const API_URL = "http://localhost:3000";
 
 const AuthContext = React.createContext();
 
@@ -57,7 +57,7 @@ function AuthProviderWrapper(props) {
 
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, isloading, user, storeToken, authenticateUser, logOutUser }}>
+    <AuthContext.Provider value={{ isLoggedIn, isloading, user, storeToken, authenticateUser, logOutUser, setLoading, setLoggedIn, setUser }}>
       {props.children}
     </AuthContext.Provider>
   )

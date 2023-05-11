@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 
-const API_URL = "https://localhost:3000";
+const API_URL = "http://localhost:3000";
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");
@@ -12,7 +12,7 @@ function LoginPage(props) {
 
   const navigate = useNavigate();
 
-  const { storeToken, authenticateUser } = useContext(AuthContext);
+  const { storeToken, authenticateUser, setLoading, setLoggedIn, setUser } = useContext(AuthContext);
 
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
@@ -30,8 +30,18 @@ function LoginPage(props) {
         console.log('JWT token', response.data.authToken);
 
         storeToken(response.data.authToken);
-        authenticateUser();
-        navigate('/profile');
+        
+        axios.get(`${API_URL}/auth/verify`, { headers: { Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVjYzAzMjdlYjBkM2ExZjY0NzA2ZmUiLCJlbWFpbCI6InBhcmlzQHBhcmlzLmNvbSIsIm5hbWUiOiJQYXJpcyIsImlhdCI6MTY4MzgwMDkzOSwiZXhwIjoxNjgzODIyNTM5fQ.yGLCx29XTwKA2_o0YY_E6l3bP1vrhfYIXvmDCbnqDps` } })
+          .then((response) => {
+            console.log("THIS IS THE RESPONSE: ", response)
+            // If the server verifies that the JWT token is valid
+            const User = response.data;
+            // Update store variables
+            setLoggedIn(true);
+            setLoading(true);
+            setUser(User);
+            navigate('/profile');
+          })
       })
       .catch((error) => {
         console.log(error)
