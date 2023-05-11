@@ -157,3 +157,41 @@ nav li {
 .wine-preferences h2 {
   font-family: 'Inter', sans-serif;
 }
+
+.wine-list {
+  font-family: 'Vidaloka', serif;
+}
+
+.wine-list-intropage {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Searchbar {
+  background-image: url("./assets/searchIcon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+  padding: 20px 10px;
+  width: 350px;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  border-color: #7a007a;
+  box-shadow: none;
+}
+
+.Searchbar:hover {
+  border-color: #7a007a;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: #dfeef9;
+  box-shadow: 0px 0px 5px 10px rgba(175, 2, 161, 0.2);
+}
+
+.main-wine-preferences {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
