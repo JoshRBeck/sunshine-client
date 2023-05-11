@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 
-const API_URL = "https://localhost:5005";
+const API_URL = "https://localhost:3000";
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");
@@ -21,6 +21,7 @@ function LoginPage(props) {
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     const requestBody = { email, password };
+    console.log(password)
 
     axios.post(`${API_URL}/auth/login`, requestBody)
       .then((response) => {
@@ -30,11 +31,10 @@ function LoginPage(props) {
 
         storeToken(response.data.authToken);
         authenticateUser();
-        navigate('/');
+        navigate('/profile');
       })
       .catch((error) => {
-        const errorDescription = error.response.data.message;
-        setErrorMessage(errorDescription);
+        console.log(error)
       });
   };
 
