@@ -275,17 +275,45 @@ Sign up Page */
   align-items: center;
 }
 
-.wine-preferences h2 {
-<<<<<<< HEAD
-  font-family: 'Inter', sans-serif;
-}
-
 .wine-list {
   font-family: 'Vidaloka', serif;
 }
 
 .wine-list-intropage {
+  position: absolute;
+  width: 390px;
+  height: 178px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  color: #7A007A;
+}
+
+.first-span {
+  position: absolute;
+  width: 39px;
+  height: 24px;
+  left: 17px;
+  top: 51px;
+  font-family: 'Telugu MN';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.second-span {
+  position: absolute;
+  width: 150px;
+  height: 40px;
+  left: 17px;
+  top: 69.33px;
+  font-family: 'Telugu MN';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 33.3333px;
+  line-height: 40px;
 }
 
 .Searchbar {
@@ -316,8 +344,13 @@ Sign up Page */
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
+  margin-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
-=======
-  font-family: "Inter", sans-serif;
+
+.main-wine-preferences h2 {
+  text-align: left;
+  margin-left: 10px;
+  font-weight: bold;
 }
->>>>>>> 0ce791b73530e9d85b2670cf3180ba626ad064db

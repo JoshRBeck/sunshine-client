@@ -11,7 +11,7 @@ function HomePage() {
     return (
         <div className="wine-list">
         <div className="wine-list-intropage">
-            <h1>The Winelist</h1>
+            <h1><span className="first-span">THE</span><span className="second-span">WINELIST</span></h1>
             <input className="Searchbar" type="search" id="site-search" name="site-search" placeholder="Search for a wine"/>
         </div>
             <div className="main-wine-preferences">
