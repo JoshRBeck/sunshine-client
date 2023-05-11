@@ -91,12 +91,6 @@ Sign up Page */
   border-color: #7a007a;
   box-shadow: none;
 }
-.inputLabels {
-  font-weight: 600;
-  font-family: "Vidaloka", serif;
-  color: black;
-}
-
 .loginInput:hover,
 .signUpInput:hover {
   border-color: #7a007a;
@@ -104,6 +98,13 @@ Sign up Page */
   color: #dfeef9;
   box-shadow: 0px 0px 5px 10px rgba(175, 2, 161, 0.2);
 }
+.inputLabels {
+  font-weight: 600;
+  font-family: "Vidaloka", serif;
+  color: black;
+}
+
+
 .signUpButton {
   background: transparent;
   border: 0px;
