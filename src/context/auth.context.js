@@ -11,7 +11,7 @@ function AuthProviderWrapper(props) {
   const [user, setUser] = useState(null);
 
   const storeToken = (token) => {
-    localStorage.setItem('authtoken', token);
+    localStorage.setItem('authToken', token);
   }
   const authenticateUser = () => {
     //Get the stored token from the local storage
@@ -41,7 +41,7 @@ function AuthProviderWrapper(props) {
   }
   const removeToken = () => {
     //Upon logout remove token from local storage
-    localStorage.removeItem("authToken");
+    localStorage.removeItem('authToken');
   }
 
   const logOutUser = () => {

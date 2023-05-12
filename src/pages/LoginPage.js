@@ -30,12 +30,13 @@ function LoginPage(props) {
         console.log('JWT token', response.data.authToken);
 
         storeToken(response.data.authToken);
-        
-        axios.get(`${API_URL}/auth/verify`, { headers: { Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVjYzAzMjdlYjBkM2ExZjY0NzA2ZmUiLCJlbWFpbCI6InBhcmlzQHBhcmlzLmNvbSIsIm5hbWUiOiJQYXJpcyIsImlhdCI6MTY4MzgwMDkzOSwiZXhwIjoxNjgzODIyNTM5fQ.yGLCx29XTwKA2_o0YY_E6l3bP1vrhfYIXvmDCbnqDps` } })
+
+        axios.get(`${API_URL}/auth/verify`, { headers: { Authorization: `Bearer ${localStorage.getItem('authToken')}` } })
           .then((response) => {
             console.log("THIS IS THE RESPONSE: ", response)
             // If the server verifies that the JWT token is valid
             const User = response.data;
+            console.log(User)
             // Update store variables
             setLoggedIn(true);
             setLoading(true);

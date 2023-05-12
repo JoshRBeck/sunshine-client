@@ -10,10 +10,14 @@ import Romance from "../assets/romance.png"
 function HomePage() {
     return (
         <div className="wine-list">
-        <div className="wine-list-intropage">
-            <h1><span className="first-span">THE</span><span className="second-span">WINELIST</span></h1>
-            <input className="Searchbar" type="search" id="site-search" name="site-search" placeholder="Search for a wine"/>
-        </div>
+            <div className="wine-list-intropage">
+                <div>
+                    <h1 className="homeTitle"><span className="first-span">THE</span><span className="second-span">WINELIST</span></h1>
+                </div>
+                <div>
+                    <input className="Searchbar" type="search" id="site-search" name="site-search" placeholder="Search for a wine" />
+                </div>
+            </div>
             <div className="main-wine-preferences">
             <div>
                 <h2>Weather Wines</h2>
