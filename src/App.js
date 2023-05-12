@@ -9,6 +9,7 @@ import WineListPage from "./pages/WineListPage"
 import WineListDetailsPage from "./pages/WineListDetailsPage"
 import IsPrivate from './components/IsPrivate';
 import IsAnon from './components/IsAnon';
+import AddWine from './pages/AddWine';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/wine-list" element={<IsAnon><WineListPage /></IsAnon>} />
         <Route path="/wine-list-details" element={<IsAnon><WineListDetailsPage /></IsAnon>} />
         <Route path="/profile" element={<IsPrivate><ProfilePage /></IsPrivate>} />
+        <Route path="/addwine" element={<IsPrivate><AddWine /></IsPrivate>} />
       </Routes>
     </div>
   );
