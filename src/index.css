@@ -50,7 +50,8 @@ nav li {
   box-shadow: none;
 }
 .signUpNavBar,
-.loginNavBar {
+.loginNavBar,
+.logOutNavBar {
   background: transparent;
   border: 0;
   border-radius: 25px;
@@ -62,7 +63,8 @@ nav li {
   margin-left: 0px;
 }
 .loginNavBar:hover,
-.signUpNavBar:hover {
+.signUpNavBar:hover,
+.logOutNavBar:hover {
   background-color: white;
   box-shadow: -3px 2px 5px 2px rgba(175, 2, 161, 0.2);
   color: #000038;
@@ -252,12 +254,22 @@ Sign up Page */
   top: 10%;
 }
 
+.UserInformation {
+  border: 1px solid black;
+}
+
+.UserDescription {
+  text-align: left;
+  margin-left: 15px;
+}
+
 .ProfilePage {
   align-content: center;
-  background-color: #cac4ce;
+  background-color: #8D86C9;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 90vh;
 }
 
 .ProfilePage form {
