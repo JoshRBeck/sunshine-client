@@ -273,14 +273,6 @@ Sign up Page */
   justify-content: center;
 }
 
-<<<<<<< HEAD
-=======
-.wine-preferences h2 {
-
-  font-family: 'Inter', sans-serif;
-}
-
->>>>>>> 105e7bcc6e57e1321ce7fbeefc07ec8a058d50cc
 .wine-list {
   font-family: 'Vidaloka', serif;
 }
@@ -350,7 +342,6 @@ Sign up Page */
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-<<<<<<< HEAD
   margin-top: 20px;
   padding-left: 5px;
   padding-right: 5px;
@@ -361,6 +352,3 @@ Sign up Page */
   margin-left: 10px;
   font-weight: bold;
 }
-=======
-}
->>>>>>> 105e7bcc6e57e1321ce7fbeefc07ec8a058d50cc
