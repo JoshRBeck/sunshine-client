@@ -1,699 +1,699 @@
-const wines = [
+[
   {
-    name: "Chardonnay 2019",
-    type: "White",
-    attributes: [
-      { name: "acidity", value: "medium" },
-      { name: "sweetness", value: "low" },
-      { name: "alcohol", value: 13.5 },
-      { name: "age", value: 2 },
-      { name: "structure", value: "light" },
-      { name: "finish", value: "medium" },
-      { name: "tannins", value: "none" },
-      { name: "fruit level", value: "moderate" }
+    "name": "Chardonnay 2019",
+    "type": "White",
+    "attributes": [
+      { "name": "acidity", "value": "medium" },
+      { "name": "sweetness", "value": "low" },
+      { "name": "alcohol", "value": 13.5 },
+      { "name": "age", "value": 2 },
+      { "name": "structure", "value": "light" },
+      { "name": "finish", "value": "medium" },
+      { "name": "tannins", "value": "none" },
+      { "name": "fruit level", "value": "moderate" }
     ],
-    variety: "Chardonnay",
-    region: "Napa Valley"
+    "variety": "Chardonnay",
+    "region": "Napa Valley"
   },
   {
-    name: "Sauvignon Blanc 2020",
-    type: "White",
-    attributes: [
-      { name: "acidity", value: "high" },
-      { name: "sweetness", value: "low" },
-      { name: "alcohol", value: 12.5 },
-      { name: "age", value: 1 },
-      { name: "structure", value: "light" },
-      { name: "finish", value: "crisp" },
-      { name: "tannins", value: "none" },
-      { name: "fruit level", value: "high" }
+    "name": "Sauvignon Blanc 2020",
+    "type": "White",
+    "attributes": [
+      { "name": "acidity", "value": "high" },
+      { "name": "sweetness", "value": "low" },
+      { "name": "alcohol", "value": 12.5 },
+      { "name": "age", "value": 1 },
+      { "name": "structure", "value": "light" },
+      { "name": "finish", "value": "crisp" },
+      { "name": "tannins", "value": "none" },
+      { "name": "fruit level", "value": "high" }
     ],
-    variety: "Sauvignon Blanc",
-    region: "Marlborough"
+    "variety": "Sauvignon Blanc",
+    "region": "Marlborough"
   },
   {
-    name: "Cabernet Sauvignon 2018",
-    type: "Red",
-    attributes: [
-      { name: "acidity", value: "medium" },
-      { name: "sweetness", value: "dry" },
-      { name: "alcohol", value: 14.5 },
-      { name: "age", value: 5 },
-      { name: "structure", value: "full-bodied" },
-      { name: "finish", value: "long" },
-      { name: "tannins", value: "firm" },
-      { name: "fruit level", value: "moderate" }
+    "name": "Cabernet Sauvignon 2018",
+    "type": "Red",
+    "attributes": [
+      { "name": "acidity", "value": "medium" },
+      { "name": "sweetness", "value": "dry" },
+      { "name": "alcohol", "value": 14.5 },
+      { "name": "age", "value": 5 },
+      { "name": "structure", "value": "full-bodied" },
+      { "name": "finish", "value": "long" },
+      { "name": "tannins", "value": "firm" },
+      { "name": "fruit level", "value": "moderate" }
     ],
-    variety: "Cabernet Sauvignon",
-    region: "Napa Valley"
+    "variety": "Cabernet Sauvignon",
+    "region": "Napa Valley"
   },
   {
-    name: "Merlot 2017",
-    type: "Red",
-    attributes: [
-      { name: "acidity", value: "medium" },
-      { name: "sweetness", value: "dry" },
-      { name: "alcohol", value: 13.0 },
-      { name: "age", value: 3 },
-      { name: "structure", value: "medium-bodied" },
-      { name: "finish", value: "smooth" },
-      { name: "tannins", value: "moderate" },
-      { name: "fruit level", value: "moderate" }
+    "name": "Merlot 2017",
+    "type": "Red",
+    "attributes": [
+      { "name": "acidity", "value": "medium" },
+      { "name": "sweetness", "value": "dry" },
+      { "name": "alcohol", "value": 13.0 },
+      { "name": "age", "value": 3 },
+      { "name": "structure", "value": "medium-bodied" },
+      { "name": "finish", "value": "smooth" },
+      { "name": "tannins", "value": "moderate" },
+      { "name": "fruit level", "value": "moderate" }
     ],
-    variety: "Merlot",
-    region: "Bordeaux"
+    "variety": "Merlot",
+    "region": "Bordeaux"
   },{
-  name: "Pinot Noir 2019",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "high" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.5 },
-    { name: "age", value: 2 },
-    { name: "structure", value: "light" },
-    { name: "finish", value: "silky" },
-    { name: "tannins", value: "low" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Pinot Noir 2019",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "high" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.5 },
+    { "name": "age", "value": 2 },
+    { "name": "structure", "value": "light" },
+    { "name": "finish", "value": "silky" },
+    { "name": "tannins", "value": "low" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Pinot Noir",
-  region: "Burgundy"
+  "variety": "Pinot Noir",
+  "region": "Burgundy"
 },
 {
-  name: "Syrah/Shiraz 2016",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 14.0 },
-    { name: "age", value: 4 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "spicy" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "high" }
+  "name": "Syrah/Shiraz 2016",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 14.0 },
+    { "name": "age", "value": 4 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "spicy" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Syrah/Shiraz",
-  region: "Barossa Valley"
+  "variety": "Syrah/Shiraz",
+  "region": "Barossa Valley"
 },
 {
-  name: "Malbec 2018",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.5 },
-    { name: "age", value: 3 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "velvety" },
-    { name: "tannins", value: "firm" },
-    { name: "fruit level", value: "high" }
+  "name": "Malbec 2018",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.5 },
+    { "name": "age", "value": 3 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "velvety" },
+    { "name": "tannins", "value": "firm" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Malbec",
-  region: "Mendoza"
+  "variety": "Malbec",
+  "region": "Mendoza"
 },
 {
-  name: "Zinfandel 2016",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "medium" },
-    { name: "alcohol", value: 14.5 },
-    { name: "age", value: 4 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "bold" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "high" }
+  "name": "Zinfandel 2016",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "medium" },
+    { "name": "alcohol", "value": 14.5 },
+    { "name": "age", "value": 4 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "bold" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Zinfandel",
-  region: "California"
+  "variety": "Zinfandel",
+  "region": "California"
 },{
-  name: "Pinot Noir 2019",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "high" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.5 },
-    { name: "age", value: 2 },
-    { name: "structure", value: "light" },
-    { name: "finish", value: "silky" },
-    { name: "tannins", value: "low" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Pinot Noir 2019",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "high" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.5 },
+    { "name": "age", "value": 2 },
+    { "name": "structure", "value": "light" },
+    { "name": "finish", "value": "silky" },
+    { "name": "tannins", "value": "low" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Pinot Noir",
-  region: "Burgundy"
+  "variety": "Pinot Noir",
+  "region": "Burgundy"
 },
 {
-  name: "Syrah/Shiraz 2016",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 14.0 },
-    { name: "age", value: 4 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "spicy" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "high" }
+  "name": "Syrah/Shiraz 2016",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 14.0 },
+    { "name": "age", "value": 4 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "spicy" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Syrah/Shiraz",
-  region: "Barossa Valley"
+  "variety": "Syrah/Shiraz",
+  "region": "Barossa Valley"
 },
 {
-  name: "Malbec 2018",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.5 },
-    { name: "age", value: 3 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "velvety" },
-    { name: "tannins", value: "firm" },
-    { name: "fruit level", value: "high" }
+  "name": "Malbec 2018",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.5 },
+    { "name": "age", "value": 3 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "velvety" },
+    { "name": "tannins", "value": "firm" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Malbec",
-  region: "Mendoza"
+  "variety": "Malbec",
+  "region": "Mendoza"
 },
 {
-  name: "Zinfandel 2016",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "medium" },
-    { name: "alcohol", value: 14.5 },
-    { name: "age", value: 4 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "bold" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "high" }
+  "name": "Zinfandel 2016",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "medium" },
+    { "name": "alcohol", "value": 14.5 },
+    { "name": "age", "value": 4 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "bold" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Zinfandel",
-  region: "California"
+  "variety": "Zinfandel",
+  "region": "California"
 },{
-  name: "Pinot Noir 2019",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "high" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.5 },
-    { name: "age", value: 2 },
-    { name: "structure", value: "light" },
-    { name: "finish", value: "silky" },
-    { name: "tannins", value: "low" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Pinot Noir 2019",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "high" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.5 },
+    { "name": "age", "value": 2 },
+    { "name": "structure", "value": "light" },
+    { "name": "finish", "value": "silky" },
+    { "name": "tannins", "value": "low" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Pinot Noir",
-  region: "Burgundy"
+  "variety": "Pinot Noir",
+  "region": "Burgundy"
 },
 {
-  name: "Syrah/Shiraz 2016",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 14.0 },
-    { name: "age", value: 4 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "spicy" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "high" }
+  "name": "Syrah/Shiraz 2016",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 14.0 },
+    { "name": "age", "value": 4 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "spicy" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Syrah/Shiraz",
-  region: "Barossa Valley"
+  "variety": "Syrah/Shiraz",
+  "region": "Barossa Valley"
 },
 {
-  name: "Malbec 2018",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.5 },
-    { name: "age", value: 3 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "velvety" },
-    { name: "tannins", value: "firm" },
-    { name: "fruit level", value: "high" }
+  "name": "Malbec 2018",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.5 },
+    { "name": "age", "value": 3 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "velvety" },
+    { "name": "tannins", "value": "firm" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Malbec",
-  region: "Mendoza"
+  "variety": "Malbec",
+  "region": "Mendoza"
 },
 {
-  name: "Zinfandel 2016",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "medium" },
-    { name: "alcohol", value: 14.5 },
-    { name: "age", value: 4 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "bold" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "high" }
+  "name": "Zinfandel 2016",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "medium" },
+    { "name": "alcohol", "value": 14.5 },
+    { "name": "age", "value": 4 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "bold" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Zinfandel",
-  region: "California"
+  "variety": "Zinfandel",
+  "region": "California"
 },{
-  name: "Pinot Noir 2019",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "high" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.5 },
-    { name: "age", value: 2 },
-    { name: "structure", value: "light" },
-    { name: "finish", value: "silky" },
-    { name: "tannins", value: "low" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Pinot Noir 2019",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "high" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.5 },
+    { "name": "age", "value": 2 },
+    { "name": "structure", "value": "light" },
+    { "name": "finish", "value": "silky" },
+    { "name": "tannins", "value": "low" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Pinot Noir",
-  region: "Burgundy"
+  "variety": "Pinot Noir",
+  "region": "Burgundy"
 },
 {
-  name: "Syrah/Shiraz 2016",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 14.0 },
-    { name: "age", value: 4 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "spicy" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "high" }
+  "name": "Syrah/Shiraz 2016",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 14.0 },
+    { "name": "age", "value": 4 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "spicy" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Syrah/Shiraz",
-  region: "Barossa Valley"
+  "variety": "Syrah/Shiraz",
+  "region": "Barossa Valley"
 },
 {
-  name: "Malbec 2018",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.5 },
-    { name: "age", value: 3 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "velvety" },
-    { name: "tannins", value: "firm" },
-    { name: "fruit level", value: "high" }
+  "name": "Malbec 2018",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.5 },
+    { "name": "age", "value": 3 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "velvety" },
+    { "name": "tannins", "value": "firm" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Malbec",
-  region: "Mendoza"
+  "variety": "Malbec",
+  "region": "Mendoza"
 },
 {
-  name: "Zinfandel 2016",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "medium" },
-    { name: "alcohol", value: 14.5 },
-    { name: "age", value: 4 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "bold" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "high" }
+  "name": "Zinfandel 2016",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "medium" },
+    { "name": "alcohol", "value": 14.5 },
+    { "name": "age", "value": 4 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "bold" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Zinfandel",
-  region: "California"
+  "variety": "Zinfandel",
+  "region": "California"
 },{
-  name: "Pinot Noir 2019",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "high" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.5 },
-    { name: "age", value: 2 },
-    { name: "structure", value: "light" },
-    { name: "finish", value: "silky" },
-    { name: "tannins", value: "low" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Pinot Noir 2019",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "high" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.5 },
+    { "name": "age", "value": 2 },
+    { "name": "structure", "value": "light" },
+    { "name": "finish", "value": "silky" },
+    { "name": "tannins", "value": "low" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Pinot Noir",
-  region: "Burgundy"
+  "variety": "Pinot Noir",
+  "region": "Burgundy"
 },
 {
-  name: "Syrah/Shiraz 2016",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 14.0 },
-    { name: "age", value: 4 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "spicy" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "high" }
+  "name": "Syrah/Shiraz 2016",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 14.0 },
+    { "name": "age", "value": 4 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "spicy" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Syrah/Shiraz",
-  region: "Barossa Valley"
+  "variety": "Syrah/Shiraz",
+  "region": "Barossa Valley"
 },
 {
-  name: "Malbec 2018",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.5 },
-    { name: "age", value: 3 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "velvety" },
-    { name: "tannins", value: "firm" },
-    { name: "fruit level", value: "high" }
+  "name": "Malbec 2018",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.5 },
+    { "name": "age", "value": 3 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "velvety" },
+    { "name": "tannins", "value": "firm" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Malbec",
-  region: "Mendoza"
+  "variety": "Malbec",
+  "region": "Mendoza"
 },
 {
-  name: "Zinfandel 2016",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "medium" },
-    { name: "alcohol", value: 14.5 },
-    { name: "age", value: 4 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "bold" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "high" }
+  "name": "Zinfandel 2016",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "medium" },
+    { "name": "alcohol", "value": 14.5 },
+    { "name": "age", "value": 4 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "bold" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Zinfandel",
-  region: "California"
+  "variety": "Zinfandel",
+  "region": "California"
 },
 {
-  name: "Riesling 2020",
-  type: "White",
-  attributes: [
-    { name: "acidity", value: "high" },
-    { name: "sweetness", value: "medium-sweet" },
-    { name: "alcohol", value: 11.5 },
-    { name: "age", value: 1 },
-    { name: "structure", value: "light" },
-    { name: "finish", value: "refreshing" },
-    { name: "tannins", value: "none" },
-    { name: "fruit level", value: "high" }
+  "name": "Riesling 2020",
+  "type": "White",
+  "attributes": [
+    { "name": "acidity", "value": "high" },
+    { "name": "sweetness", "value": "medium-sweet" },
+    { "name": "alcohol", "value": 11.5 },
+    { "name": "age", "value": 1 },
+    { "name": "structure", "value": "light" },
+    { "name": "finish", "value": "refreshing" },
+    { "name": "tannins", "value": "none" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Riesling",
-  region: "Mosel"
+  "variety": "Riesling",
+  "region": "Mosel"
 },
 {
-  name: "Gewürztraminer 2019",
-  type: "White",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "medium-dry" },
-    { name: "alcohol", value: 13.0 },
-    { name: "age", value: 2 },
-    { name: "structure", value: "medium-bodied" },
-    { name: "finish", value: "spicy" },
-    { name: "tannins", value: "none" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Gewürztraminer 2019",
+  "type": "White",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "medium-dry" },
+    { "name": "alcohol", "value": 13.0 },
+    { "name": "age", "value": 2 },
+    { "name": "structure", "value": "medium-bodied" },
+    { "name": "finish", "value": "spicy" },
+    { "name": "tannins", "value": "none" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Gewürztraminer",
-  region: "Alsace"
+  "variety": "Gewürztraminer",
+  "region": "Alsace"
 },
 {
-  name: "Pinot Grigio/Pinot Gris 2021",
-  type: "White",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 12.5 },
-    { name: "age", value: 1 },
-    { name: "structure", value: "light" },
-    { name: "finish", value: "crisp" },
-    { name: "tannins", value: "none" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Pinot Grigio/Pinot Gris 2021",
+  "type": "White",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 12.5 },
+    { "name": "age", "value": 1 },
+    { "name": "structure", "value": "light" },
+    { "name": "finish", "value": "crisp" },
+    { "name": "tannins", "value": "none" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Pinot Grigio/Pinot Gris",
-  region: "Friuli-Venezia Giulia"
+  "variety": "Pinot Grigio/Pinot Gris",
+  "region": "Friuli-Venezia Giulia"
 },
 {
-  name: "Sangiovese 2016",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.5 },
-    { name: "age", value: 5 },
-    { name: "structure", value: "medium-bodied" },
-    { name: "finish", value: "smooth" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Sangiovese 2016",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.5 },
+    { "name": "age", "value": 5 },
+    { "name": "structure", "value": "medium-bodied" },
+    { "name": "finish", "value": "smooth" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Sangiovese",
-  region: "Tuscany"
+  "variety": "Sangiovese",
+  "region": "Tuscany"
 },{
-  name: "Tempranillo 2017",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 14.0 },
-    { name: "age", value: 4 },
-    { name: "structure", value: "medium-bodied" },
-    { name: "finish", value: "spicy" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Tempranillo 2017",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 14.0 },
+    { "name": "age", "value": 4 },
+    { "name": "structure", "value": "medium-bodied" },
+    { "name": "finish", "value": "spicy" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Tempranillo",
-  region: "Rioja"
+  "variety": "Tempranillo",
+  "region": "Rioja"
 },
 {
-  name: "Chianti Classico 2018",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "high" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.5 },
-    { name: "age", value: 3 },
-    { name: "structure", value: "medium-bodied" },
-    { name: "finish", value: "smooth" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Chianti Classico 2018",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "high" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.5 },
+    { "name": "age", "value": 3 },
+    { "name": "structure", "value": "medium-bodied" },
+    { "name": "finish", "value": "smooth" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Sangiovese",
-  region: "Chianti Classico"
+  "variety": "Sangiovese",
+  "region": "Chianti Classico"
 },
 {
-  name: "Grenache/Garnacha 2019",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 14.0 },
-    { name: "age", value: 2 },
-    { name: "structure", value: "medium-bodied" },
-    { name: "finish", value: "fruity" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "high" }
+  "name": "Grenache/Garnacha 2019",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 14.0 },
+    { "name": "age", "value": 2 },
+    { "name": "structure", "value": "medium-bodied" },
+    { "name": "finish", "value": "fruity" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Grenache/Garnacha",
-  region: "Côtes du Rhône"
+  "variety": "Grenache/Garnacha",
+  "region": "Côtes du Rhône"
 },
 {
-  name: "Viognier 2021",
-  type: "White",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.0 },
-    { name: "age", value: 1 },
-    { name: "structure", value: "medium-bodied" },
-    { name: "finish", value: "aromatic" },
-    { name: "tannins", value: "none" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Viognier 2021",
+  "type": "White",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.0 },
+    { "name": "age", "value": 1 },
+    { "name": "structure", "value": "medium-bodied" },
+    { "name": "finish", "value": "aromatic" },
+    { "name": "tannins", "value": "none" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Viognier",
-  region: "Condrieu"
+  "variety": "Viognier",
+  "region": "Condrieu"
 },
 {
-  name: "Chenin Blanc 2020",
-  type: "White",
-  attributes: [
-    { name: "acidity", value: "high" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 12.5 },
-    { name: "age", value: 2 },
-    { name: "structure", value: "light" },
-    { name: "finish", value: "crisp" },
-    { name: "tannins", value: "none" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Chenin Blanc 2020",
+  "type": "White",
+  "attributes": [
+    { "name": "acidity", "value": "high" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 12.5 },
+    { "name": "age", "value": 2 },
+    { "name": "structure", "value": "light" },
+    { "name": "finish", "value": "crisp" },
+    { "name": "tannins", "value": "none" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Chenin Blanc",
-  region: "Stellenbosch"
+  "variety": "Chenin Blanc",
+  "region": "Stellenbosch"
 },
 {
-  name: "Gavi 2019",
-  type: "White",
-  attributes: [
-    { name: "acidity", value: "high" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 12.0 },
-    { name: "age", value: 3 },
-    { name: "structure", value: "light" },
-    { name: "finish", value: "crisp" },
-    { name: "tannins", value: "none" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Gavi 2019",
+  "type": "White",
+  "attributes": [
+    { "name": "acidity", "value": "high" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 12.0 },
+    { "name": "age", "value": 3 },
+    { "name": "structure", "value": "light" },
+    { "name": "finish", "value": "crisp" },
+    { "name": "tannins", "value": "none" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Cortese",
-  region: "Gavi"
+  "variety": "Cortese",
+  "region": "Gavi"
 },
 {
-  name: "Albariño 2020",
-  type: "White",
-  attributes: [
-    { name: "acidity", value: "high" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.5 },
-    { name: "age", value: 1 },
-    { name: "structure", value: "light" },
-    { name: "finish", value: "crisp" },
-    { name: "tannins", value: "none" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Albariño 2020",
+  "type": "White",
+  "attributes": [
+    { "name": "acidity", "value": "high" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.5 },
+    { "name": "age", "value": 1 },
+    { "name": "structure", "value": "light" },
+    { "name": "finish", "value": "crisp" },
+    { "name": "tannins", "value": "none" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Albariño",
-  region: "Rías Baixas"
+  "variety": "Albariño",
+  "region": "Rías Baixas"
 },
 {
-  name: "Moscato d'Asti 2022",
-  type: "White",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "sweet" },
-    { name: "alcohol", value: 5.5 },
-    { name: "age", value: 1 },
-    { name: "structure", value: "light" },
-    { name: "finish", value: "effervescent" },
-    { name: "tannins", value: "none" },
-    { name: "fruit level", value: "high" }
+  "name": "Moscato d'Asti 2022",
+  "type": "White",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "sweet" },
+    { "name": "alcohol", "value": 5.5 },
+    { "name": "age", "value": 1 },
+    { "name": "structure", "value": "light" },
+    { "name": "finish", "value": "effervescent" },
+    { "name": "tannins", "value": "none" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Moscato",
-  region: "Piedmont"
+  "variety": "Moscato",
+  "region": "Piedmont"
 },
 {
-  name: "Carmenere 2017",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 14.0 },
-    { name: "age", value: 4 },
-    { name: "structure", value: "medium-bodied" },
-    { name: "finish", value: "velvety" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Carmenere 2017",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 14.0 },
+    { "name": "age", "value": 4 },
+    { "name": "structure", "value": "medium-bodied" },
+    { "name": "finish", "value": "velvety" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Carmenere",
-  region: "Colchagua Valley"
+  "variety": "Carmenere",
+  "region": "Colchagua Valley"
 },
 {
-  name: "Malbec 2019",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.5 },
-    { name: "age", value: 2 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "smooth" },
-    { name: "tannins", value: "firm" },
-    { name: "fruit level", value: "high" }
+  "name": "Malbec 2019",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.5 },
+    { "name": "age", "value": 2 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "smooth" },
+    { "name": "tannins", "value": "firm" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Malbec",
-  region: "Mendoza"
+  "variety": "Malbec",
+  "region": "Mendoza"
 },
 {
-  name: "Syrah/Shiraz 2018",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 14.0 },
-    { name: "age", value: 3 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "spicy" },
-    { name: "tannins", value: "firm" },
-    { name: "fruit level", value: "high" }
+  "name": "Syrah/Shiraz 2018",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 14.0 },
+    { "name": "age", "value": 3 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "spicy" },
+    { "name": "tannins", "value": "firm" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Syrah/Shiraz",
-  region: "Barossa Valley"
+  "variety": "Syrah/Shiraz",
+  "region": "Barossa Valley"
 },
 {
-  name: "Zinfandel 2016",
-  type: "Red",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "off-dry" },
-    { name: "alcohol", value: 14.5 },
-    { name: "age", value: 5 },
-    { name: "structure", value: "full-bodied" },
-    { name: "finish", value: "bold" },
-    { name: "tannins", value: "moderate" },
-    { name: "fruit level", value: "high" }
+  "name": "Zinfandel 2016",
+  "type": "Red",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "off-dry" },
+    { "name": "alcohol", "value": 14.5 },
+    { "name": "age", "value": 5 },
+    { "name": "structure", "value": "full-bodied" },
+    { "name": "finish", "value": "bold" },
+    { "name": "tannins", "value": "moderate" },
+    { "name": "fruit level", "value": "high" }
   ],
-  variety: "Zinfandel",
-  region: "California"
+  "variety": "Zinfandel",
+  "region": "California"
 },
 {
-  name: "Pinot Grigio 2021",
-  type: "White",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 12.0 },
-    { name: "age", value: 1 },
-    { name: "structure", value: "light" },
-    { name: "finish", value: "crisp" },
-    { name: "tannins", value: "none" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Pinot Grigio 2021",
+  "type": "White",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 12.0 },
+    { "name": "age", "value": 1 },
+    { "name": "structure", "value": "light" },
+    { "name": "finish", "value": "crisp" },
+    { "name": "tannins", "value": "none" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Pinot Grigio",
-  region: "Veneto"
+  "variety": "Pinot Grigio",
+  "region": "Veneto"
 },
 {
-  name: "Sémillon 2018",
-  type: "White",
-  attributes: [
-    { name: "acidity", value: "medium" },
-    { name: "sweetness", value: "off-dry" },
-    { name: "alcohol", value: 13.5 },
-    { name: "age", value: 3 },
-    { name: "structure", value: "medium-bodied" },
-    { name: "finish", value: "creamy" },
-    { name: "tannins", value: "none" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Sémillon 2018",
+  "type": "White",
+  "attributes": [
+    { "name": "acidity", "value": "medium" },
+    { "name": "sweetness", "value": "off-dry" },
+    { "name": "alcohol", "value": 13.5 },
+    { "name": "age", "value": 3 },
+    { "name": "structure", "value": "medium-bodied" },
+    { "name": "finish", "value": "creamy" },
+    { "name": "tannins", "value": "none" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Sémillon",
-  region: "Hunter Valley"
+  "variety": "Sémillon",
+  "region": "Hunter Valley"
 },
 {
-  name: "Côtes de Provence Rosé 2020",
-  type: "Rosé",
-  attributes: [
-    { name: "acidity", value: "high" },
-    { name: "sweetness", value: "dry" },
-    { name: "alcohol", value: 13.0 },
-    { name: "age", value: 1 },
-    { name: "structure", value: "light" },
-    { name: "finish", value: "refreshing" },
-    { name: "tannins", value: "none" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Côtes de Provence Rosé 2020",
+  "type": "Rosé",
+  "attributes": [
+    { "name": "acidity", "value": "high" },
+    { "name": "sweetness", "value": "dry" },
+    { "name": "alcohol", "value": 13.0 },
+    { "name": "age", "value": 1 },
+    { "name": "structure", "value": "light" },
+    { "name": "finish", "value": "refreshing" },
+    { "name": "tannins", "value": "none" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Grenache Blend",
-  region: "Provence"
+  "variety": "Grenache Blend",
+  "region": "Provence"
 },
 {
-  name: "Riesling Spätlese 2015",
-  type: "White",
-  attributes: [
-    { name: "acidity", value: "high" },
-    { name: "sweetness", value: "sweet" },
-    { name: "alcohol", value: 9.0 },
-    { name: "age", value: 6 },
-    { name: "structure", value: "light" },
-    { name: "finish", value: "honeyed" },
-    { name: "tannins", value: "none" },
-    { name: "fruit level", value: "moderate" }
+  "name": "Riesling Spätlese 2015",
+  "type": "White",
+  "attributes": [
+    { "name": "acidity", "value": "high" },
+    { "name": "sweetness", "value": "sweet" },
+    { "name": "alcohol", "value": 9.0 },
+    { "name": "age", "value": 6 },
+    { "name": "structure", "value": "light" },
+    { "name": "finish", "value": "honeyed" },
+    { "name": "tannins", "value": "none" },
+    { "name": "fruit level", "value": "moderate" }
   ],
-  variety: "Riesling",
-  region: "Mosel"
+  "variety": "Riesling",
+  "region": "Mosel"
 }]
