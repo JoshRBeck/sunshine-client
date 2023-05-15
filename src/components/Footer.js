@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import houseWhite from "../assets/houseWhite.png";
-import profileIcon from "../assets/Profile Icon.png";
-import searchIconWhite from "../assets/searchIconwhite.png"
+import houseWhite from "../assets/houseWhite.png"
+import profileIcon from "../assets/profileIcon.png";
+import searchIconWhite from "../assets/searchIcon.png"
 import whiteWineBottle from "../assets/White Wine bottle.png"
 import starIcon from "../assets/WhiteStar.png"
 
