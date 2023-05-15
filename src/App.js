@@ -23,7 +23,7 @@ function App() {
         <Route path="/wine-list" element={<IsAnon><WineListPage /></IsAnon>} />
         <Route path="/wine-list-details" element={<IsAnon><WineListDetailsPage /></IsAnon>} />
         <Route path="/profile" element={<IsPrivate><ProfilePage /></IsPrivate>} />
-        <Route path="/addwine" element={<IsPrivate><AddWine /></IsPrivate>} />
+        <Route path="/addwine" element={<AddWine />} />
       </Routes>
     </div>
   );

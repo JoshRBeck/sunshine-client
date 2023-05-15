@@ -73,7 +73,8 @@ nav li {
 .logInButtonLoginPage:hover,
 .logInButtonSignUpPage:hover,
 .signupButtonLoginPage:hover,
-.signUpButton:hover {
+.signUpButton:hover,
+.addWineButton:hover {
   background-color: #7a007a;
   box-shadow: -3px 2px 5px 2px rgba(175, 2, 161, 0.2);
   color: #dfeef9;
@@ -85,7 +86,8 @@ Sign up Page */
 .signupPageHeading {
   color: #7a007a;
 }
-.signUpInput {
+.signUpInput,
+.addWineInput {
   border-radius: 25px;
   border-color: #7a007a;
   box-shadow: none;
@@ -94,7 +96,8 @@ Sign up Page */
   margin-top: 5px;
 }
 .loginInput:hover,
-.signUpInput:hover {
+.signUpInput:hover,
+.addWineInput:hover {
   border-color: #7a007a;
   box-shadow: 0px 0px 5px 10px rgba(175, 2, 161, 0.2);
   color: #dfeef9;
@@ -385,4 +388,42 @@ Sign up Page */
   text-align: left;
   margin-left: 10px;
   font-weight: bold;
+}
+
+/* Add Wine Page */
+.wine-form {
+  align-items: center;
+  text-align: center;
+}
+.addWineLabel {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+  font-size: 0.8em;
+  font-family: "Vidaloka", serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 250px;
+}
+.addWineButton {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent;
+  border: 0px;
+  border-radius: 25px;
+  color: #7a007a;
+  font-family: "Vidaloka", serif;
+  font-size: 1.6em;
+  font-weight: 500;
+}
+.addWineInput {
+  max-height: 45px;
+}
+.attributesLabel {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Vidaloka", serif;
+  font-weight: 600;
 }
