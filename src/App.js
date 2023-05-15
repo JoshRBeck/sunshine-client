@@ -13,6 +13,7 @@ import IsPrivate from './components/IsPrivate';
 import IsAnon from './components/IsAnon';
 import AddWine from './pages/AddWine';
 import axios from "axios"
+import Footer from './components/Footer';
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
 
   useEffect(() => {
     getAllWines();
-  }, [] );
+  }, []);
 
   return (
     <div className="App">
@@ -44,8 +45,9 @@ function App() {
         <Route path="/wine-list/:wineId" element={<WineListDetailsPage wines={wines} />} />
         <Route path="/profile" element={<IsPrivate><ProfilePage /></IsPrivate>} />
         <Route path="/addwine" element={<AddWine />} />
-        <Route path="*" element={<ErrorPage/>}/>
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
