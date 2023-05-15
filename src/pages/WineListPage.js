@@ -1,10 +1,8 @@
-import WineCard1 from "../assets/wine-card1.png";
-import WineCard2 from "../assets/wine-card2.png";
-import WineCard3 from "../assets/wine-card3.png";
-import WineCard4 from "../assets/wine-card4.png";
 import BackButton from "../assets/BackButton.png";
+import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
-function WineListPage() {
+function WineListPage(props) {
 
   return (
     <div className="WineListCard_Container">
@@ -15,16 +13,7 @@ function WineListPage() {
         <h2>SUNSHINE</h2>
       </div>
       <div clasName="WineListCard">
-        <img src={WineCard1} alt="Wine" />
-      </div>
-      <div clasName="WineListCard">
-        <img src={WineCard2} alt="Wine" />
-      </div>
-      <div clasName="WineListCard">
-        <img src={WineCard3} alt="Wine" />
-      </div>
-      <div clasName="WineListCard">
-        <img src={WineCard4} alt="Wine" />
+        <></>
       </div>
     </div>
   );

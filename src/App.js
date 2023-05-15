@@ -10,6 +10,7 @@ import WineListDetailsPage from "./pages/WineListDetailsPage"
 import IsPrivate from './components/IsPrivate';
 import IsAnon from './components/IsAnon';
 import AddWine from './pages/AddWine';
+import winesData from "./wines-data.json"
 
 
 function App() {
@@ -20,8 +21,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/signup" element={<IsAnon><SignupPage /></IsAnon>} />
         <Route path="/login" element={<IsAnon><LoginPage /></IsAnon>} />
-        <Route path="/wine-list" element={<IsAnon><WineListPage /></IsAnon>} />
-        <Route path="/wine-list-details" element={<IsAnon><WineListDetailsPage /></IsAnon>} />
+        <Route path="/wine-list" element={<IsAnon><WineListPage wines={winesData} /></IsAnon>} />
+        <Route path="/wine-list-details" element={<IsAnon><WineListDetailsPage wines={winesData} /></IsAnon>} />
         <Route path="/profile" element={<IsPrivate><ProfilePage /></IsPrivate>} />
         <Route path="/addwine" element={<AddWine />} />
       </Routes>
