@@ -17,7 +17,7 @@ function WineListDetails(props) {
       }, [wineId])
 
     return (
-        <div class="WineList_Details">
+        <div className="WineList_Details">
             <h1>Wine Details</h1>
             {!foundWine && <h3>Wine not found!</h3>}
 

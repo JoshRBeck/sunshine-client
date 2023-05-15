@@ -22,8 +22,7 @@ function AuthProviderWrapper(props) {
       console.log(storedToken)
       //We must send the JWT token in the requests "Authorization" headers
       axios.get(
-        `${API_URL}/auth/verify`,
-        { headers: { Authorization: `Bearer: ${storedToken}` } }
+        `${API_URL}/auth/verify`, { headers: { Authorization: `Bearer ${storedToken}` }}
       )
         .then((response) => {
           // If the server verifies that the JWT token is valid

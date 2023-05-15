@@ -55,7 +55,7 @@ nav li {
 }
 .signUpNavBar,
 .loginNavBar,
-.logOutButton {
+.logOutButton,
 .logOutNavBar {
   background: transparent;
   border: 0;
@@ -69,9 +69,7 @@ nav li {
 }
 .loginNavBar:hover,
 .signUpNavBar:hover,
-
-.logOutButton:hover {
-
+.logOutButton:hover,
 .logOutNavBar:hover {
   background-color: white;
   box-shadow: -3px 2px 5px 2px rgba(175, 2, 161, 0.2);

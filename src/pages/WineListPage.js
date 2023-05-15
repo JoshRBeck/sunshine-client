@@ -16,7 +16,7 @@ function WineListPage(props) {
         </a>
       </div>
       <h2>WINE LIST</h2>
-      {wines.map(wine => {
+      {props?.wines?.map(wine => {
         return (
           <div key={wine._id} className="Onewine">
             {/* <h3>{wine.name}</h3> */}
@@ -34,13 +34,13 @@ function WineListPage(props) {
             <p>Wine region: {wine.region}</p>
             
 
-            {wine.type === "white" &&
+            {wine.type === "White" &&
             <img src={WhiteWine} alt="White Wine"/>
             }
-            {wine.type === "red" &&
+            {wine.type === "Red" &&
             <img src={RedWine} alt="Red Wine"/>
             }
-            {wine.type === "wine" &&
+            {wine.type === "Rosé" &&
             <img src={RoseWine} alt="Rosé Wine"/>
             }
           </div>
