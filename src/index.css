@@ -56,6 +56,7 @@ nav li {
 .signUpNavBar,
 .loginNavBar,
 .logOutButton {
+.logOutNavBar {
   background: transparent;
   border: 0;
   border-radius: 25px;
@@ -68,7 +69,10 @@ nav li {
 }
 .loginNavBar:hover,
 .signUpNavBar:hover,
+
 .logOutButton:hover {
+
+.logOutNavBar:hover {
   background-color: white;
   box-shadow: -3px 2px 5px 2px rgba(175, 2, 161, 0.2);
   color: #000038;
@@ -261,12 +265,22 @@ Sign up Page */
   top: 10%;
 }
 
+.UserInformation {
+  border: 1px solid black;
+}
+
+.UserDescription {
+  text-align: left;
+  margin-left: 15px;
+}
+
 .ProfilePage {
   align-content: center;
-  background-color: #cac4ce;
+  background-color: #8D86C9;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 90vh;
 }
 
 .ProfilePage form {
@@ -329,20 +343,22 @@ Sign up Page */
   justify-content: center;
   align-items: center;
   width: 390px;
-  height: 150px;
+  height: 100px;
   left: 0px;
   top: 0px;
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   color: #7a007a;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .first-span {
   position: absolute;
   width: 39px;
   height: 24px;
-  left: 17px;
-  top: 51px;
+  left: 15px;
+  top: 0;
   font-family: "Telugu MN";
   font-style: normal;
   font-weight: 400;
@@ -354,8 +370,8 @@ Sign up Page */
   position: absolute;
   width: 150px;
   height: 40px;
-  left: 17px;
-  top: 69.33px;
+  left: 15px;
+  top: 20px;
   font-family: "Telugu MN";
   font-style: normal;
   font-weight: 400;
@@ -373,12 +389,15 @@ Sign up Page */
   box-shadow: none;
   font-weight: 500;
   /* padding: 20px 10px; */
-  margin-top: 65px;
+  /* margin-top: 65px; */
   margin-bottom: 5px;
   max-height: 45px;
   padding-top: 0;
   padding-bottom: 0;
   width: 350px;
+  position: relative;
+  top: 0;
+  left: -5px;
 }
 
 .Searchbar:hover {
