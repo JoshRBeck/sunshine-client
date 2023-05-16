@@ -15,17 +15,18 @@ import AddWine from './pages/AddWine';
 import axios from "axios"
 import Footer from './components/Footer';
 
-
 function App() {
   const [wines, setWines] = useState(null)
 
-  const API_URL = "http://localhost:3000";
+  const API_URL = "http://localhost:3000/";
 
   const getAllWines = () => {
     const storedToken = localStorage.getItem("authToken");
     console.log(storedToken)
     axios
-      .get(`${API_URL}/api/wines`, { headers: { Authorization: `Bearer ${storedToken}` } })
+      .get(`${API_URL}api/wines`, {
+        headers: { Authorization: `Bearer ${storedToken}` }
+      })
       .then((response) => setWines(response.data))
       .catch((error) => console.log(error));
   };
