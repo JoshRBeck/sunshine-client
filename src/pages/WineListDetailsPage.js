@@ -4,6 +4,9 @@ import Chart from "chart.js/auto";
 import WhiteWine from "../assets/white-wine.png"
 import RedWine from "../assets/red-wine.png"
 import RoseWine from "../assets/rose-wine.png"
+import location from "../assets/location.png"
+import grapes from "../assets/grapes.png"
+import cards from "../assets/cards.png"
 
 function WineListDetails(props) {
   const [foundWine, setFoundWine] = useState(null);
@@ -80,7 +83,9 @@ function WineListDetails(props) {
       {!foundWine && <h3>Wine not found!</h3>}
       {foundWine && (
         <>
-          <div className="top-section">
+          <div
+            className={`top-section ${foundWine.type.toLowerCase()}-wine`}
+          >
             <div className="wine-image">
               {foundWine.type === "White" &&
                 <img src={WhiteWine} className="wine-image" alt="White Wine" />
@@ -93,10 +98,10 @@ function WineListDetails(props) {
               }
             </div>
             <div className="wine-info">
-              <h2>{foundWine.name}</h2>
-              <p>Type: {foundWine.type}</p>
-              <p>Variety: {foundWine.variety}</p>
-              <p>Region: {foundWine.region}</p>
+              <h1>{foundWine.name}</h1>
+              <p><img src={grapes} className="grapes" alt="grapes"></img>Type: {foundWine.type}</p>
+              <p><img src={location} className="location" alt="location"></img>Variety: {foundWine.variety}</p>
+              <p><img src={cards} className="cards" alt="cards"></img>Region: {foundWine.region}</p>
             </div>
           </div>
 
