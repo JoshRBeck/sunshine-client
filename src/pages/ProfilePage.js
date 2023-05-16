@@ -36,7 +36,7 @@ function ProfilePage() {
                 </>
             )}
             <form>
-                <label for="description">About me:</label>
+                <label className="aboutMe" for="description">About me:</label>
                 <textarea name="description" id="description" rows="4" cols="20">
                 </textarea>
             </form>
