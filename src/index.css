@@ -477,7 +477,6 @@ Sign up Page */
 
 .OneWine {
   display: flex;
-  justify-content: end;
   align-items: center;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -502,11 +501,10 @@ Sign up Page */
 .WineDetails {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-family: 'Inter', sans-serif;
   padding: 0 20px;
   font-size: 12px;
+  flex: 2 0 220px;
 }
 
 .WineDetails h3 {

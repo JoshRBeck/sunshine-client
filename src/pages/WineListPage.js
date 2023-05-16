@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import WhiteWine from "../assets/white-wine.png";
 import RedWine from "../assets/red-wine.png";
 import RoseWine from "../assets/rose-wine.png";
+import location from "../assets/location.png"
+import grapes from "../assets/grapes.png"
+import cards from "../assets/cards.png"
 
 function WineListPage(props) {
   return (
@@ -33,8 +36,8 @@ function WineListPage(props) {
               <h3>
                 <Link to={`/wine-list/${wine._id}`}>{wine.name} </Link>
               </h3>
-              <p>
-                Wine type: <b>{wine.type}</b>
+              <p><img src={grapes} alt="Wine Type"/>
+                Type: <b>{wine.type}</b>
               </p>
               <p>{wine.attributes.name}</p>
               {/* <div>
@@ -46,11 +49,11 @@ function WineListPage(props) {
                   );
                 })}
               </div> */}
-              <p>
-                Wine variety: <b>{wine.variety}</b>
+              <p><img src={cards} alt="Wine Variety" />
+                Variety: <b>{wine.variety}</b>
               </p>
-              <p>
-                Wine region: <b>{wine.region}</b>
+              <p><img src={location} alt="Wine RegioN" />
+                Region: <b>{wine.region}</b>
               </p>
             </div>
 
