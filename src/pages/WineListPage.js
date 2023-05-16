@@ -6,8 +6,6 @@ import RedWine from "../assets/red-wine.png"
 import RoseWine from "../assets/rose-wine.png"
 
 function WineListPage(props) {
-
-
   return (
     <div className="WineListCard_Container">
       <div className="Heading_Container">
@@ -24,24 +22,24 @@ function WineListPage(props) {
             <p>Wine type: {wine.type}</p>
             <p>{wine.attributes.name}</p>
             <div>
-            {wine.attributes.map(attribute => {
-              return (
-              <p>{attribute.name}: {attribute.value}</p>
-              )
-            })}
+              {wine.attributes.map(attribute => {
+                return (
+                  <p>{attribute.name}: {attribute.value}</p>
+                )
+              })}
             </div>
             <p>Wine variety: {wine.variety}</p>
             <p>Wine region: {wine.region}</p>
-            
+
 
             {wine.type === "White" &&
-            <img src={WhiteWine} alt="White Wine"/>
+              <img src={WhiteWine} alt="White Wine" />
             }
             {wine.type === "Red" &&
-            <img src={RedWine} alt="Red Wine"/>
+              <img src={RedWine} alt="Red Wine" />
             }
             {wine.type === "Rosé" &&
-            <img src={RoseWine} alt="Rosé Wine"/>
+              <img src={RoseWine} alt="Rosé Wine" />
             }
           </div>
         )

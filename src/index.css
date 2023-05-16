@@ -48,6 +48,7 @@ nav li {
   position: sticky;
   border: none;
   box-shadow: none;
+  padding-bottom: 0;
 }
 .username {
   font-weight: 700;
@@ -274,11 +275,11 @@ Sign up Page */
 
 .ProfilePage {
   align-content: center;
-  background-color: #8D86C9;
+  background-color: #8d86c9;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .ProfilePage form {
@@ -467,6 +468,7 @@ Sign up Page */
   align-items: center;
 }
 /* Footer styling */
+
 .footer-bar {
   background: #000038;
   border-radius: 0;
@@ -477,4 +479,9 @@ Sign up Page */
   display: flex;
   justify-content: space-evenly;
   margin-top: 3px;
+  position: sticky;
+}
+/* Detailed wine page */
+.wine-image {
+  max-width: 350px;
 }
