@@ -461,12 +461,42 @@ Sign up Page */
   font-weight: 600;
 }
 
-.oneWine {
+.OneWine {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
+
+.WhiteWine {
+  background-color: #7A007A;
+}
+
+.RedWine {
+  background-color: #8D86C9;
+}
+
+.RoseWine {
+  background-color: #000038;
+}
+
+.WineDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.WineImage {
+  display: flex;
+  justify-content: center;
+}
+
+.Wine {
+  width: 150px;
+  height: auto;
+}
+
 /* Footer styling */
 
 .footer-bar {
