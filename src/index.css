@@ -1,9 +1,10 @@
 body {
   margin: 0;
+  padding-bottom: 100px;
 }
 
 a {
-  color: #FFFFFF;
+  color: #ffffff;
   list-style: none;
   text-decoration: none;
 }
@@ -100,7 +101,8 @@ Sign up Page */
   color: #7a007a;
 }
 .signUpInput,
-.addWineInput {
+.addWineInput,
+.editWineInput {
   border-radius: 25px;
   border-color: #7a007a;
   box-shadow: none;
@@ -110,7 +112,8 @@ Sign up Page */
 }
 .loginInput:hover,
 .signUpInput:hover,
-.addWineInput:hover {
+.addWineInput:hover,
+.editWineInput:hover {
   border-color: #7a007a;
   box-shadow: 0px 0px 5px 10px rgba(175, 2, 161, 0.2);
   color: #dfeef9;
@@ -252,6 +255,10 @@ Sign up Page */
   max-width: 25rem;
   padding: 0 10px;
   margin: 0 15px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .WineListCard_Container h2 {
@@ -263,10 +270,11 @@ Sign up Page */
 }
 
 .Heading_Container {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   margin: 5px 10px;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .Heading_Container a {
@@ -331,7 +339,11 @@ Sign up Page */
   margin-bottom: 40px;
   max-height: 70px;
 }
-
+.home-headings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .wine-preferences {
   align-items: center;
   display: flex;
@@ -347,6 +359,11 @@ Sign up Page */
 
 .wine-list {
   font-family: "Vidaloka", serif;
+  display: flex;
+  font-family: "Vidaloka", serif;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .wine-list-intropage {
@@ -360,12 +377,19 @@ Sign up Page */
   left: 0px;
   top: 0px;
   background: #ffffff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   color: #7a007a;
   padding-left: 5px;
   padding-right: 5px;
+  margin-top: 15px;
 }
-
+.delete-icon,
+.edit-icon,
+.add-icon {
+  color: #000038;
+  height: 25px;
+  width: 25px;
+  padding: 11px;
+}
 .first-span {
   position: absolute;
   width: 39px;
@@ -391,7 +415,11 @@ Sign up Page */
   font-size: 33.3333px;
   line-height: 40px;
 }
-
+.wine-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .Searchbar {
   background-image: url("./assets/searchIcon.png");
   background-size: contain;
@@ -442,7 +470,8 @@ Sign up Page */
   align-items: center;
   text-align: center;
 }
-.addWineLabel {
+.addWineLabel,
+.editWineLabel {
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -481,27 +510,27 @@ Sign up Page */
   border-radius: 10px;
   margin-bottom: 10px;
   height: 17rem;
-  color: #F0EBDB;
+  color: #f0ebdb;
   /* width: 358px;
   height: 120px; */
 }
 
 .WhiteWine {
-  background-color: #7a007a;
-}
-
-.RedWine {
   background-color: #8d86c9;
 }
 
-.RoseWine {
+.RedWine {
   background-color: #000038;
+}
+
+.RoseWine {
+  background-color: #7a007a;
 }
 
 .WineDetails {
   display: flex;
   flex-direction: column;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 0 20px;
   font-size: 12px;
   flex: 2 0 220px;
@@ -513,7 +542,7 @@ Sign up Page */
 
 .WinDetailsHeading {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .WineImage {
@@ -549,7 +578,9 @@ Sign up Page */
   margin-bottom: 20px;
   justify-content: space-around;
   border-radius: 30px;
-  margin-top: 7px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .wine-image img {
@@ -561,11 +592,20 @@ Sign up Page */
 .wine-info {
   margin-left: 20px;
   color: #fdfbff;
-  text-align: left;
+  text-align: center;
   font-family: "Inter";
 }
 .wine-info p {
   font-size: 1.5em;
+}
+@media (max-width: 768px) {
+  .wine-info p {
+    font-size: 1em;
+    margin-right: 35px;
+  }
+  .back-button-details {
+    margin-left: 35px;
+  }
 }
 .white-wine {
   background-color: #8d86c9;
@@ -584,4 +624,42 @@ Sign up Page */
   padding-right: 10px;
   height: 17px;
   width: 20px;
+}
+.image-and-button {
+  display: flex;
+}
+.back-button-details {
+  margin-top: 25px;
+  margin-right: 0px;
+  height: 25px;
+  width: 25px;
+}
+.wine-attributes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+.wine-attribute-one {
+  background-color: #8d86c9;
+}
+.wine-attribute-two {
+  background-color: #7a007a;
+}
+.wine-attribute-one,
+.wine-attribute-two {
+  border-radius: 10px;
+  padding: 10px 5px 10px 5px;
+  width: 175px;
+  height: 50px;
+  font-family: "Inter";
+  color: #fdfbff;
+  font-size: 1.2em;
+}
+.attribute-container {
+  display: flex;
+  flex-direction: column;
+}
+.attribute-value {
+  font-family: "Inter";
+  font-weight: 500;
 }

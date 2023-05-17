@@ -12,6 +12,8 @@ import ErrorPage from './pages/ErrorPage';
 import IsPrivate from './components/IsPrivate';
 import IsAnon from './components/IsAnon';
 import AddWine from './pages/AddWine';
+import EditWine from './pages/EditWine'
+import DeleteWine from './pages/DeleteWine'
 import axios from "axios"
 import Footer from './components/Footer';
 
@@ -46,6 +48,8 @@ function App() {
         <Route path="/wine-list/:wineId" element={<WineListDetailsPage wines={wines} />} />
         <Route path="/profile" element={<IsPrivate><ProfilePage /></IsPrivate>} />
         <Route path="/addwine" element={<AddWine />} />
+        <Route path="/editwine" element={<EditWine />} />
+        <Route path="/deletewine" element={<DeleteWine />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />

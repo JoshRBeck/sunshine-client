@@ -3,19 +3,27 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import WhiteWine from "../assets/white-wine.png";
 import RedWine from "../assets/red-wine.png";
-import Rose3 from "../assets/Rose3.png"
+import Rose3 from "../assets/Rose4"
 import location from "../assets/location.png"
 import grapes from "../assets/grapes.png"
 import cards from "../assets/cards.png"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faPlus } from '@fortawesome/free-solid-svg-icons';
+
 
 function WineListPage(props) {
   return (
     <div className="WineListCard_Container">
       <div className="Heading_Container">
-        <a href="/profile">
-          <img src={BackButton} alt="GoBack" />
-        </a>
-        <h2>WINE LIST</h2>
+        <div>
+          <a href="/profile">
+            <img src={BackButton} alt="GoBack" />
+          </a>
+          <h2>WINE LIST</h2>
+        </div>
+        <div>
+          <Link to={"/addwine"}><FontAwesomeIcon icon={faPlus} className="add-icon" /></Link>
+        </div>
       </div>
       {props?.wines?.map((wine) => {
         return (
@@ -24,10 +32,10 @@ function WineListPage(props) {
               wine.type === "White"
                 ? "WhiteWine OneWine"
                 : wine.type === "Red"
-                ? "RedWine OneWine"
-                : wine.type === "Rosé"
-                ? "RoseWine OneWine"
-                : "OneWine"
+                  ? "RedWine OneWine"
+                  : wine.type === "Rosé"
+                    ? "RoseWine OneWine"
+                    : "OneWine"
             }
             key={wine._id}
           >
@@ -36,7 +44,7 @@ function WineListPage(props) {
               <h3>
                 <Link to={`/wine-list/${wine._id}`}>{wine.name} </Link>
               </h3>
-              <p><img src={grapes} alt="Wine Type"/>
+              <p><img src={grapes} alt="Wine Type" />
                 Type: <b>{wine.type}</b>
               </p>
               <p>{wine.attributes.name}</p>
@@ -71,7 +79,7 @@ function WineListPage(props) {
           </div>
         );
       })}
-      <div clasName="WineListCard">
+      <div className="WineListCard">
         <></>
       </div>
     </div>

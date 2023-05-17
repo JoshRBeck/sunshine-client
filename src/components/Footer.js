@@ -12,7 +12,7 @@ function Footer() {
       <Link to="/">
         <img src={houseWhite} alt="house-white" style={{ maxHeight: '30px' }} />
       </Link>
-      <Link to="/search">
+      <Link to="/">
         <img src={searchIconWhite} alt="search-icon" style={{ maxHeight: '30px' }} />
       </Link>
       <Link to="/favorites">

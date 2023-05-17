@@ -42,7 +42,7 @@ function AddWine(props) {
     e.preventDefault();
   }
   axios
-    .post(`${API_URL}/winelistdetailspage/wine`, requestBody)
+    .post(`${API_URL}/wine-list`, requestBody)
     .then((response) => {
       setWine({
         name: (""),
