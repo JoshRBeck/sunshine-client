@@ -57,7 +57,7 @@ function WineListPage(props) {
           key={wine._id}
         >
           <div>
-            <DeleteButton wineId={wine._id} />
+          <DeleteButton wineId={wine._id} onDelete={handleDelete} />
           </div>
           <div className="WineDetails">
             <h2>
