@@ -58,9 +58,9 @@ function HomePage() {
                     </div>
                     <div>
                         {/* <input " type="search" id="site-search" name="site-search" placeholder="Search for a wine" /> */}
-                        <form onSubmit={handleSubmit} className="search-form">
+                        <form className="search-form">
                             <div className="search-bar">
-                                <input value={search} onChange={handleSearch} className="Searchbar" placeholder="Search for a wine" />
+                                <input value={search} className="Searchbar" placeholder="Search for a wine" />
                                 {/* <input type="image" src={searchIcon} alt="search" className="search-icon" /> */}
                             </div>
                         </form>

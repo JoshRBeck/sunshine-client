@@ -60,20 +60,32 @@ function WineListDetails({ wines }) {
           <div className="bottom-section">
             <div className="wine-attributes">
               <div className="left-column">
-                {foundWine.attributes.slice(0, 4).map((attribute, index) => (
-                  <div className="attribute-container" key={index}>
-                    <span className="wine-attribute-one">{attribute.name.charAt(0).toUpperCase() + attribute.name.slice(1)}</span>
-                    <span className="attribute-value">{attribute.value}</span>
-                  </div>
-                ))}
+                {foundWine.attributes.slice(0, 4).map((attribute, index) => {
+                  const attributeValue =
+                    typeof attribute.value === 'string'
+                      ? attribute.value.charAt(0).toUpperCase() + attribute.value.slice(1)
+                      : attribute.value;
+                  return (
+                    <div className="attribute-container" key={index}>
+                      <span className="wine-attribute-one">{attribute.name.charAt(0).toUpperCase() + attribute.name.slice(1)}</span>
+                      <span className="attribute-value">{attributeValue}</span>
+                    </div>
+                  );
+                })}
               </div>
               <div className="right-column">
-                {foundWine.attributes.slice(4).map((attribute, index) => (
-                  <div className="attribute-container" key={index}>
-                    <span className="wine-attribute-two">{attribute.name.charAt(0).toUpperCase() + attribute.name.slice(1)}</span>
-                    <span className="attribute-value">{attribute.value}</span>
-                  </div>
-                ))}
+                {foundWine.attributes.slice(4).map((attribute, index) => {
+                  const attributeValue =
+                    typeof attribute.value === 'string'
+                      ? attribute.value.charAt(0).toUpperCase() + attribute.value.slice(1)
+                      : attribute.value;
+                  return (
+                    <div className="attribute-container" key={index}>
+                      <span className="wine-attribute-two">{attribute.name.charAt(0).toUpperCase() + attribute.name.slice(1)}</span>
+                      <span className="attribute-value">{attributeValue}</span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
