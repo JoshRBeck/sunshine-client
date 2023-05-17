@@ -8,7 +8,7 @@ import grapes from "../assets/grapes.png"
 import cards from "../assets/cards.png"
 import backButtonWhite from "../assets/Back Button White.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 function WineListDetails({ wines }) {
   const [foundWine, setFoundWine] = useState(null);
@@ -32,9 +32,11 @@ function WineListDetails({ wines }) {
         <>
           <div className={`top-section ${foundWine.type.toLowerCase()}-wine`}>
             <div className="image-and-button">
-              <Link to="/wine-list"><img src={backButtonWhite} alt="white button" className="back-button-details" /></Link>
-              <Link to={"/editwine"}><FontAwesomeIcon icon={faEdit} className="edit-icon" /></Link>
-              <Link to={"/deletewine"}><FontAwesomeIcon icon={faTrash} className="delete-icon" /></Link>
+              <div className="buttons-details-page">
+                <Link to="/wine-list"><img src={backButtonWhite} alt="white button" className="back-button-details" /></Link>
+                <Link to={"/editwine"}><FontAwesomeIcon icon={faEdit} className="edit-icon" /></Link>
+                <Link to={"/deletewine"}><FontAwesomeIcon icon={faTrash} className="delete-icon" /></Link>
+              </div>
               <div className="wine-image">
                 {foundWine.type === "White" &&
                   <img src={WhiteWine} className="wine-image" alt="White Wine" />

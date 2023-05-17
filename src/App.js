@@ -47,9 +47,9 @@ function App() {
         <Route path="/wine-list" element={<WineListPage wines={wines} />} />
         <Route path="/wine-list/:wineId" element={<WineListDetailsPage wines={wines} />} />
         <Route path="/profile" element={<IsPrivate><ProfilePage /></IsPrivate>} />
-        <Route path="/addwine" element={<AddWine />} />
-        <Route path="/editwine" element={<EditWine />} />
-        <Route path="/deletewine" element={<DeleteWine />} />
+        <Route path="/addwine" element={<IsPrivate><AddWine /></IsPrivate>} />
+        <Route path="/editwine" element={<IsPrivate><EditWine /></IsPrivate>} />
+        <Route path="/deletewine" element={<IsPrivate><DeleteWine /></IsPrivate>} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
