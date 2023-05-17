@@ -24,7 +24,6 @@ function App() {
 
   const getAllWines = () => {
     const storedToken = localStorage.getItem("authToken");
-    console.log(storedToken)
     axios
       .get(`${API_URL}api/wines`, {
         headers: { Authorization: `Bearer ${storedToken}` }

@@ -1,5 +1,5 @@
 import BackButton from "../assets/BackButton.png";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import WhiteWine from "../assets/white-wine.png";
 import RedWine from "../assets/red-wine.png";
@@ -8,18 +8,37 @@ import location from "../assets/location.png"
 import grapes from "../assets/grapes.png"
 import cards from "../assets/cards.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faPlus } from '@fortawesome/free-solid-svg-icons';
-
+import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { useSearchParams } from "react-router-dom";
 
 function WineListPage(props) {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const query = searchParams.get("query");
+  const [wines, setWines] = useState([])
+
+  // useEffect(() => {
+  //   if (!query) {
+  //     setWines(props.wines);
+  //   } else {
+  //     const filteredWines = props.wines.filter((wine) =>
+  //       wine.name.toLowerCase().includes(query.toLowerCase())
+  //     );
+  //     setWines(filteredWines);
+  //   }
+  // }, [query, props.wines]);
+
+  // const DeleteButton = ({ wineId, onDelete }) => {
+  //   const handleDelete = () => {
+  //     onDelete(wineId);
+  //   };
   return (
     <div className="WineListCard_Container">
       <div className="Heading_Container">
-        <div>
-          <a href="/profile">
-            <img src={BackButton} alt="GoBack" />
+        <div className="wine-list-and-button">
+          <a href="/">
+            <img src={BackButton} alt="GoBack" style={{ marginRight: '25px', paddingLeft: '15px' }} />
           </a>
-          <h2>WINE LIST</h2>
+          <h1>WINE LIST</h1>
         </div>
         <div>
           <Link to={"/addwine"}><FontAwesomeIcon icon={faPlus} className="add-icon" /></Link>
@@ -37,30 +56,27 @@ function WineListPage(props) {
                     ? "RoseWine OneWine"
                     : "OneWine"
             }
-            key={wine._id}
-          >
+            key={wine._id}>
+            <div>
+              {/* <button onClick={handleDelete}><FontAwesomeIcon icon={faTrash} className="delete-icon" /></button> */}
+            </div>
             <div className="WineDetails">
-              {/* <h3>{wine.name}</h3> */}
-              <h3>
+
+              <h2>
                 <Link to={`/wine-list/${wine._id}`}>{wine.name} </Link>
-              </h3>
-              <p><img src={grapes} alt="Wine Type" />
+              </h2>
+              <p className="wine-list-text">
+                <img src={grapes} alt="Wine Type" className="wine-list-card-icons" />
                 Type: <b>{wine.type}</b>
               </p>
-              <p>{wine.attributes.name}</p>
-              {/* <div>
-                {wine.attributes.map((attribute) => {
-                  return (
-                    <p>
-                      {attribute.name}: <b>{attribute.value}</b>
-                    </p>
-                  );
-                })}
-              </div> */}
-              <p><img src={cards} alt="Wine Variety" />
+
+              <p className="wine-list-text">
+                <img src={cards} alt="Wine Variety" className="wine-list-card-icons" />
                 Variety: <b>{wine.variety}</b>
               </p>
-              <p><img src={location} alt="Wine RegioN" />
+
+              <p className="wine-list-text">
+                <img src={location} alt="Wine Region" className="wine-list-card-icons" />
                 Region: <b>{wine.region}</b>
               </p>
             </div>

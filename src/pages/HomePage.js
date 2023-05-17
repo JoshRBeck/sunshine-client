@@ -12,65 +12,42 @@ import { useNavigate, useSearchParams } from "react-router-dom"
 function HomePage() {
     const [wines, setWines] = useState([]);
     const [search, setSearch] = useState("");
-
     const navigate = useNavigate();
-
     const [searchParams, setSearchParams] = useSearchParams();
-    const name = searchParams.get("name");
+    const name = searchParams.get("name", "variety");
 
-    function handleSearch(e) {
-        setSearch(e.target.value);
-    }
+    // function handleSearch(e) {
+    //     setSearch(e.target.value);
+    //     console.log(e);
+    // }
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        setSearchParams({ name: search });
+    // function handleSubmit(e) {
+    //     e.preventDefault();
+    //     navigate(`/wine-list?query=${search}`);
+    //     console.log(search);
+    // }
+    // useEffect(() => {
+    //     const fetchedWines = [{
+    //         name: "",
+    //         type: "",
+    //         variety: "",
+    //         region: ""
+    //     }
+    //     ];
+    //     setWines(fetchedWines);
+    //     console.log("HELLO", fetchedWines)
+    // }, []);
 
-        const wineToNavigate = wines.find((wine) => {
-            return wine.name.toLowerCase().includes(search.toLowerCase());
-        });
-
-        // Check if a matching wine is found
-        if (wineToNavigate) {
-            navigate(`/wine-list/${wineToNavigate.id}`);
-        } else {
-            // Handle the case where no matching wine is found
-            console.log("Wine not found");
-        }
-    }
-    useEffect(() => {
-        const fetchedWines = [
-          {
-            name: "",
-            type: "",
-            attributes: {
-              acidity: "",
-              sweetness: "",
-              alcohol: "",
-              age: "",
-              structure: "",
-              finish: "",
-              tannins: "",
-              fruitLevel: ""
-            },
-            variety: "",
-            region: ""
-          }
-        ];
-      
-        setWines(fetchedWines);
-      }, []);
-      
-    useEffect(() => {
-        if (!name) {
-            setWines(wines);
-        } else {
-            const filteredWines = wines.filter((wine) => {
-                return wine.name.toLowerCase().includes(name.toLowerCase());
-            });
-            setWines(filteredWines);
-        }
-    }, [name, wines]);
+    // useEffect(() => {
+    //     if (!name) {
+    //         setWines(wines);
+    //     } else {
+    //         const filteredWines = wines.filter((wine) => {
+    //             return wine.name.toLowerCase().includes(name.toLowerCase());
+    //         });
+    //         setWines(filteredWines);
+    //     }
+    // }, [name, wines]);
 
     return (
         <div className="wine-list">
@@ -83,7 +60,7 @@ function HomePage() {
                         {/* <input " type="search" id="site-search" name="site-search" placeholder="Search for a wine" /> */}
                         <form onSubmit={handleSubmit} className="search-form">
                             <div className="search-bar">
-                                <input value={search} onChange={handleSearch} className="Searchbar" />
+                                <input value={search} onChange={handleSearch} className="Searchbar" placeholder="Search for a wine" />
                                 {/* <input type="image" src={searchIcon} alt="search" className="search-icon" /> */}
                             </div>
                         </form>

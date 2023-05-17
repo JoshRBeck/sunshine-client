@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 a {
@@ -8,7 +8,10 @@ a {
   list-style: none;
   text-decoration: none;
 }
-
+.wine-list-and-button {
+  display: flex;
+  align-items: center;
+}
 .WineListCard_Container p {
   margin: 3px;
 }
@@ -254,10 +257,8 @@ Sign up Page */
 }
 
 .WineListCard_Container {
-  max-width: 25rem;
   padding: 0 10px;
   margin: 0 15px;
-  margin-left: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -304,7 +305,6 @@ Sign up Page */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
 }
 
 .ProfilePage form {
@@ -363,7 +363,6 @@ Sign up Page */
 .wine-list {
   font-family: "Vidaloka", serif;
   display: flex;
-  font-family: "Vidaloka", serif;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -390,6 +389,7 @@ Sign up Page */
   color: #000038;
   height: 25px;
   width: 25px;
+  margin-right: 25px;
 }
 .first-span {
   position: absolute;
@@ -422,6 +422,16 @@ Sign up Page */
   align-items: center;
   max-width: 570px;
 }
+.wine-list-text {
+  padding: 5px;
+  font-size: 2em;
+}
+.wine-list-card-icons {
+  padding-right: 10px;
+  min-width: 15px;
+  min-height: 15px;
+  margin-bottom: 3px;
+}
 .Searchbar {
   background-image: url("./assets/searchIcon.png");
   background-size: contain;
@@ -446,7 +456,7 @@ Sign up Page */
 .Searchbar:hover {
   border-color: #7a007a;
   transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-  color: #dfeef9;
+  color: black;
   box-shadow: 0px 0px 5px 10px rgba(175, 2, 161, 0.2);
 }
 
@@ -508,13 +518,12 @@ Sign up Page */
 
 .OneWine {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   border-radius: 10px;
   margin-bottom: 10px;
   height: 17rem;
   color: #f0ebdb;
-  /* width: 358px;
-  height: 120px; */
 }
 
 .WhiteWine {
@@ -542,7 +551,7 @@ Sign up Page */
   font-size: 20px;
 }
 
-.WinDetailsHeading {
+.WineDetailsHeading {
   text-decoration: none;
   color: #ffffff;
 }
@@ -630,22 +639,22 @@ Sign up Page */
 .image-and-button {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-content: center;
   align-items: center;
 }
 .back-button-details {
   min-height: 25px;
   min-width: 25px;
-  margin: 10px;
-  margin-top: 4px;
+  margin-bottom: 35px;
+  margin-right: 10px;
 }
 .delete-icon,
 .edit-icon {
   color: #dfeef9;
   min-height: 25px;
   min-width: 25px;
-  margin: 10px;
+  margin: 13px;
 }
 .wine-attributes {
   display: flex;
@@ -654,9 +663,11 @@ Sign up Page */
 }
 .wine-attribute-one {
   background-color: #8d86c9;
+  /* background-image: linear-gradient(#62101f, #3b0710); */
 }
 .wine-attribute-two {
   background-color: #7a007a;
+  /* background-image: linear-gradient(#feed8c, #d0bc4a); */
 }
 .wine-attribute-one,
 .wine-attribute-two {
@@ -674,7 +685,8 @@ Sign up Page */
 }
 .attribute-value {
   font-family: "Inter";
-  font-weight: 500;
+  font-weight: 600;
+  padding: 10px;
 }
 /*error page styling */
 .page-img {
@@ -687,6 +699,7 @@ Sign up Page */
   align-items: center;
 }
 .error-message {
+  color: #7a007a;
   font-weight: 700;
   margin-top: 30px;
 }
