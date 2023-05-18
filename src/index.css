@@ -653,6 +653,10 @@ Sign up Page */
   margin-bottom: 35px;
   margin-right: 10px;
 }
+button {
+  background: transparent;
+  border: 0;
+}
 .delete-icon,
 .edit-icon {
   color: #dfeef9;

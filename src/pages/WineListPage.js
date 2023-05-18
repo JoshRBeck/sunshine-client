@@ -20,14 +20,9 @@ function WineListPage(props) {
   };
 
   const DeleteButton = ({ wineId }) => {
-    const handleDeleteClick = () => {
+    const handleDelete = () => {
       handleDelete(wineId);
     };
-    return (
-      <button onClick={handleDeleteClick}>
-        <FontAwesomeIcon icon={faTrash} className="delete-icon" />
-      </button>
-    );
   };
 
   return (
@@ -43,7 +38,7 @@ function WineListPage(props) {
           <Link to={"/addwine"}><FontAwesomeIcon icon={faPlus} className="add-icon" /></Link>
         </div>
       </div>
-      {props.wines.map((wine) => (
+      {props.wines && props.wines.map((wine) => (
         <div
           className={
             wine.type === "White"
@@ -54,10 +49,11 @@ function WineListPage(props) {
                   ? "RoseWine OneWine"
                   : "OneWine"
           }
-          key={wine._id}
-        >
+          key={wine._id}>
           <div>
-          <DeleteButton wineId={wine._id} onDelete={handleDelete} />
+            <button onClick={handleDelete}>
+              <FontAwesomeIcon icon={faTrash} className="delete-icon" />
+            </button>
           </div>
           <div className="WineDetails">
             <h2>
@@ -84,7 +80,6 @@ function WineListPage(props) {
         </div>
       ))}
       <div className="WineListCard">
-        <></>
       </div>
     </div>
   );
