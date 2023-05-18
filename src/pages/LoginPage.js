@@ -31,7 +31,7 @@ function LoginPage(props) {
 
         storeToken(response.data.authToken);
 
-        axios.get(`${API_URL}/auth/verify`, { headers: { Authorization: `Bearer ${localStorage.getItem('authToken')}` } })
+        axios.get(`${API_URL}auth/verify`, { headers: { Authorization: `Bearer ${localStorage.getItem('authToken')}` } })
           .then((response) => {
             console.log("THIS IS THE RESPONSE: ", response)
             // If the server verifies that the JWT token is valid
