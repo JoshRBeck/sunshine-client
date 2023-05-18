@@ -20,7 +20,7 @@ import Footer from './components/Footer';
 function App() {
   const [wines, setWines] = useState(null)
 
-  const API_URL = "http://localhost:3000/";
+  const API_URL = process.env.REACT_APP_API_URL;
 
   const getAllWines = () => {
     const storedToken = localStorage.getItem("authToken");

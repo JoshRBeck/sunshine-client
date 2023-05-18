@@ -7,7 +7,7 @@ function ProfilePage() {
     const { user, setUser } = useState("")
     // const { user } = useContext(AuthContext);
 
-    const apiURL = "http://localhost:3000/api/sunshine";
+    const apiURL = process.env.REACT_APP_API_URL;
 
     const getUser = () => {
 
