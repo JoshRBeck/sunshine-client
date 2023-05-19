@@ -7,7 +7,7 @@ function ProfilePage() {
     const { user, setUser } = useState("")
     // const { user } = useContext(AuthContext);
 
-    const apiURL = process.env.REACT_APP_API_URL;
+    const apiURL = /*process.env.REACT_APP_API_URL */ "http://localhost:3000/";
 
     const getUser = () => {
 
