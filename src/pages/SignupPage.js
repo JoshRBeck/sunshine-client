@@ -24,7 +24,7 @@ function SignupPage(props) {
     // Make an axios request to the API
     // If the POST request is a successful redirect to the login page
     // If the request resolves with an error, set the error message in the state
-    axios.post(/*process.env.REACT_APP_API_URL */ "http://localhost:3000/", requestBody)
+    axios.post(process.env.REACT_APP_API_URL, requestBody)
       .then((response) => {
         navigate('/login');
       })

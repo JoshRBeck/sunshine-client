@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 
-const API_URL = /*process.env.REACT_APP_API_URL */ "http://localhost:3000/";
+const API_URL = process.env.REACT_APP_API_URL;
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");
@@ -17,13 +17,12 @@ function LoginPage(props) {
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
 
-
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     const requestBody = { email, password };
     console.log(password)
 
-    axios.post(`${API_URL}auth/login`, requestBody)
+    axios.post(`${API_URL}/auth/login`, requestBody)
       .then((response) => {
         // Request to the server's endpoint `/auth/login` returns a response
         // with the JWT string ->  response.data.authToken
@@ -31,7 +30,7 @@ function LoginPage(props) {
 
         storeToken(response.data.authToken);
 
-        axios.get(`${API_URL}auth/verify`, { headers: { Authorization: `Bearer ${localStorage.getItem('authToken')}` } })
+        axios.get(`${API_URL}/auth/verify`, { headers: { Authorization: `Bearer ${localStorage.getItem('authToken')}` } })
           .then((response) => {
             console.log("THIS IS THE RESPONSE: ", response)
             // If the server verifies that the JWT token is valid

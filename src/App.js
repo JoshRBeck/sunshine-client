@@ -20,12 +20,13 @@ import Footer from './components/Footer';
 function App() {
   const [wines, setWines] = useState(null)
 
-  const API_URL = /*process.env.REACT_APP_API_URL */"http://localhost:3000/" ;
+  const API_URL = process.env.REACT_APP_API_URL;
 
+  // This is failing when the user is not authenticated.
   const getAllWines = () => {
     const storedToken = localStorage.getItem("authToken");
     axios
-      .get(`${API_URL}api/wines`, {
+      .get(`${API_URL}/api/wines`, {
         headers: { Authorization: `Bearer ${storedToken}` }
       })
       .then((response) => setWines(response.data))
