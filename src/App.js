@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from "./components/Navbar"
 import { Routes, Route } from "react-router-dom"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import HomePage from './pages/HomePage';
 import ProfilePage from "./pages/ProfilePage"
 import SignupPage from "./pages/SignupPage"
@@ -23,7 +23,7 @@ function App() {
   const API_URL = process.env.REACT_APP_API_URL;
 
   // This is failing when the user is not authenticated.
-  const getAllWines = () => {
+  const getAllWines = useCallback(() => {
     const storedToken = localStorage.getItem("authToken");
     axios
       .get(`${API_URL}/api/wines`, {
@@ -31,11 +31,11 @@ function App() {
       })
       .then((response) => setWines(response.data))
       .catch((error) => console.log(error));
-  };
+  }, [API_URL]);
 
   useEffect(() => {
     getAllWines();
-  }, []);
+  }, [getAllWines]);
 
   return (
     <div className="App">

@@ -8,7 +8,7 @@
 #Env
 .env
 
-# testing
+#testing
 /coverage
 
 # production

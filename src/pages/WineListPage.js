@@ -1,5 +1,4 @@
 import BackButton from "../assets/BackButton.png";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import WhiteWine from "../assets/white-wine.png";
 import RedWine from "../assets/red-wine.png";
@@ -8,22 +7,18 @@ import location from "../assets/location.png";
 import grapes from "../assets/grapes.png";
 import cards from "../assets/cards.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
-import { useSearchParams } from "react-router-dom";
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 function WineListPage(props) {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const query = searchParams.get("query");
+  // const handleDelete = (wineId) => {
+  //   // Delete logic goes here
+  // };
 
-  const handleDelete = (wineId) => {
-    // Delete logic goes here
-  };
-
-  const DeleteButton = ({ wineId }) => {
-    const handleDelete = () => {
-      handleDelete(wineId);
-    };
-  };
+  // const DeleteButton = ({ wineId }) => {
+  //   const handleDelete = () => {
+  //     handleDelete(wineId);
+  //   };
+  // };
 
   return (
     <div className="WineListCard_Container">
@@ -51,9 +46,9 @@ function WineListPage(props) {
           }
           key={wine._id}>
           <div>
-            <button onClick={handleDelete}>
+            {/* <button onClick={handleDelete}>
               <FontAwesomeIcon icon={faTrash} className="delete-icon" />
-            </button>
+            </button> */}
           </div>
           <div className="WineDetails">
             <h2>

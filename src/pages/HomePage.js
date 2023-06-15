@@ -29,10 +29,10 @@ function HomePage() {
     navigate(`/wine-list?query=${search}`);
     console.log(search);
   }
-  // This useEffect will filter wines based on a criteria
-  // useEffect(() => {
-  //   setFilteredWines(wines.filter((e) => e.type === "white"))
-  // }, [])
+
+  useEffect(() => {
+    setFilteredWines(wines.filter((e) => e.type === "white"))
+  }, [])
 
   useEffect(() => {
     if (!name) {

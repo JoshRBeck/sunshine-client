@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import WhiteWine from "../assets/white-wine.png"
 import RedWine from "../assets/red-wine.png"
@@ -10,21 +10,33 @@ import backButtonWhite from "../assets/Back Button White.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
-function WineListDetails({ wines }) {
+function useFilteredWineList(wines, wineId) {
   const [foundWine, setFoundWine] = useState(null);
-  const [attributes, setAttributes] = useState([]);
-  const { wineId } = useParams();
 
   useEffect(() => {
     if (wines && wines.length > 0) {
       const wine = wines.find((wineObj) => wineObj._id === wineId);
-
-      if (wine) {
-        console.log(wine);
-        setFoundWine(wine);
-      }
+      console.log(wine);
+      setFoundWine(wine ?? null);
     }
-  }, [wineId]);
+  }, [wines, wineId]);
+
+  return foundWine
+}
+
+function WineListDetails({ wines }) {
+  // const [foundWine, setFoundWine] = useState(null);
+  const { wineId } = useParams();
+  const foundWine = useFilteredWineList(wines, wineId)
+
+  // useEffect(() => {
+  //   if (wines && wines.length > 0) {
+  //     const wine = wines.find((wineObj) => wineObj._id === wineId);
+  //     console.log(wine);
+  //     setFoundWine(wine ?? null);
+  //   }
+  // }, [wines, wineId]);
+
   return (
     <div className="WineList_Details">
       {!foundWine && <h3>Wine not found!</h3>}
