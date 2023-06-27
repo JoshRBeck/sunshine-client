@@ -21,8 +21,8 @@ function WineListPage(props) {
   // };
 
   return (
-    <div className="WineListCard_Container">
-      <div className="Heading_Container">
+    <div className="wine-list-card_Container">
+      <div className="heading-container">
         <div className="wine-list-and-button">
           <a href="/">
             <img src={BackButton} alt="GoBack" style={{ marginRight: '25px', paddingLeft: '15px' }} />
@@ -35,22 +35,23 @@ function WineListPage(props) {
       </div>
       {props.wines && props.wines.map((wine) => (
         <div
-          className={
-            wine.type === "White"
-              ? "WhiteWine OneWine"
-              : wine.type === "Red"
-                ? "RedWine OneWine"
-                : wine.type === "Rosé"
-                  ? "RoseWine OneWine"
-                  : "OneWine"
-          }
+       className={
+  wine.type === "White"
+    ? "white-wine one-wine"
+    : wine.type === "Red"
+      ? "red-wine one-wine"
+      : wine.type === "Rosé"
+        ? "rose-wine one-wine"
+        : "one-wine"
+}
+
           key={wine._id}>
           <div>
             {/* <button onClick={handleDelete}>
               <FontAwesomeIcon icon={faTrash} className="delete-icon" />
             </button> */}
           </div>
-          <div className="WineDetails">
+          <div className="wine-details">
             <h2>
               <Link to={`/wine-list/${wine._id}`}>{wine.name} </Link>
             </h2>
@@ -67,14 +68,14 @@ function WineListPage(props) {
               Region: <b>{wine.region}</b>
             </p>
           </div>
-          <div className="WineImage">
+          <div className="wine-image">
             {wine.type === "White" && <img className="Wine" src={WhiteWine} alt="White Wine" />}
             {wine.type === "Red" && <img className="Wine" src={RedWine} alt="Red Wine" />}
             {wine.type === "Rosé" && <img className="Wine" src={Rose3} alt="Rosé Wine" />}
           </div>
         </div>
       ))}
-      <div className="WineListCard">
+      <div className="wine-list-card">
       </div>
     </div>
   );

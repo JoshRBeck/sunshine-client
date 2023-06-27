@@ -10,7 +10,6 @@ function ProfilePage() {
     const apiURL = process.env.REACT_APP_API_URL;
 
     const getUser = () => {
-
         axios
             .get(apiURL)
             .then((response) => {
@@ -25,7 +24,7 @@ function ProfilePage() {
     }, []);
 
     return (
-        <div className="ProfilePage">
+        <div className="profile-page">
             <h1>Profile Page</h1>
             {user && (
                 <>
@@ -36,7 +35,7 @@ function ProfilePage() {
                 </>
             )}
             <form>
-                <label className="aboutMe" for="description">About me:</label>
+                <label className="about-me" for="description">About me:</label>
                 <textarea name="description" id="description" rows="4" cols="20">
                 </textarea>
             </form>
@@ -44,7 +43,7 @@ function ProfilePage() {
             <div className="wine-preferences">
                 <h1>Wine Preferences</h1>
 
-                <h2 className="profileLabels">Wine type:</h2>
+                <h2 className="profile-labels">Wine type:</h2>
                 <form>
                     <label for="wine-type">Choose a preferred wine type</label>
                     <select name="wine-type" id="wine-type">

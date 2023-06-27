@@ -1,0 +1,115 @@
+.top-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-around;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.wine-image img {
+  width: 200px;
+  height: auto;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.wine-info {
+  margin-left: 20px;
+  color: #fdfbff;
+  text-align: center;
+  font-family: "Inter";
+}
+.wine-info p {
+  font-size: 1.5em;
+}
+@media (max-width: 768px) {
+  .wine-info p {
+    font-size: 1em;
+    margin-right: 35px;
+  }
+  .back-button-details {
+    margin-left: 35px;
+  }
+}
+.white-wine {
+  background-color: #8d86c9;
+}
+
+.red-wine {
+  background-color: #000038;
+}
+
+.rosé-wine {
+  background-color: #7a007a;
+}
+.grapes,
+.location,
+.cards {
+  padding-right: 10px;
+  height: 17px;
+  width: 20px;
+}
+.image-and-button {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
+.back-button-details {
+  min-height: 25px;
+  min-width: 25px;
+  margin-bottom: 35px;
+  margin-right: 10px;
+}
+button {
+  background: transparent;
+  border: 0;
+}
+.delete-icon,
+.edit-icon {
+  color: #dfeef9;
+  min-height: 25px;
+  min-width: 25px;
+  margin: 13px;
+}
+.wine-attributes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+.wine-attribute-one {
+  background-color: #8d86c9;
+  /* background-image: linear-gradient(#62101f, #3b0710); */
+}
+.wine-attribute-two {
+  background-color: #7a007a;
+  /* background-image: linear-gradient(#feed8c, #d0bc4a); */
+}
+.wine-attribute-one,
+.wine-attribute-two {
+  border-radius: 10px;
+  padding: 10px 5px 10px 5px;
+  width: 175px;
+  height: 50px;
+  font-family: "Inter";
+  color: #fdfbff;
+  font-size: 1.2em;
+}
+.attribute-container {
+  display: flex;
+  flex-direction: column;
+}
+.attribute-value {
+  font-family: "Inter";
+  font-weight: 600;
+  padding: 10px;
+}
+.add-wine-button:hover {
+  background-color: #7a007a;
+  box-shadow: -3px 2px 5px 2px rgba(175, 2, 161, 0.2);
+  color: #dfeef9;
+  transition: 1.5s;
+}

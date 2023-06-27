@@ -1,4 +1,7 @@
-import './App.css';
+import './CSS/login.css'
+import './CSS/navbar.css'
+import './CSS/signup.css'
+import './CSS/winedetail.css'
 import Navbar from "./components/Navbar"
 import { Routes, Route } from "react-router-dom"
 import { useState, useEffect, useCallback } from "react";

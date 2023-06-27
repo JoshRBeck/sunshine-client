@@ -20,7 +20,6 @@ function LoginPage(props) {
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     const requestBody = { email, password };
-    console.log(password)
 
     axios.post(`${API_URL}/auth/login`, requestBody)
       .then((response) => {
@@ -44,40 +43,45 @@ function LoginPage(props) {
           })
       })
       .catch((error) => {
-        console.log(error)
+        if (error.response && error.response.data && error.response.data.message) {
+          setErrorMessage(error.response.data.message);
+        } else {
+          setErrorMessage("An error occurred. Please try again.");
+        }
       });
+
   };
 
   return (
-    <div className="LoginPage LoginPage--Modified">
-      <h1 className="loginHeading">Login</h1>
+    <div className="login-page login-page--Modified">
+      <h1 className="login-heading">Login</h1>
 
       <form onSubmit={handleLoginSubmit}>
-        <label className="inputLabels">Email:</label>
+        <label className="input-labels">Email:</label>
         <input
           type="email"
           name="email"
           value={email}
           onChange={handleEmail}
-          className="loginInput"
+          className="login-input"
           placeholder="Email"
         />
 
-        <label className="inputLabels">Password:</label>
+        <label className="input-labels">Password:</label>
         <input
           type="password"
           name="password"
           value={password}
           onChange={handlePassword}
-          className="loginInput"
+          className="login-input"
           placeholder="Password"
         />
-        <button type="submit" className="logInButtonLoginPage">Login</button>
+        <button type="submit" className="login-button-login-page">Login</button>
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-      <p className="noAccountText">Don't have an account yet?</p>
-      <Link to={"/signup"}><button className="signupButtonLoginPage">Sign Up</button></Link>
+      <p className="no-account-text">Don't have an account yet?</p>
+      <Link to={"/signup"}><button className="signup-button-login-page">Sign Up</button></Link>
     </div>
   );
 }

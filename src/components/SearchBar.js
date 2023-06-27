@@ -1,6 +1,6 @@
 // import React from 'react';
 
-// const SearchBar = () => {
+// const search-bar = () => {
 //   const handleSearch = (event) => {
 //     // Handle search logic
 //   };
@@ -13,4 +13,4 @@
 //   );
 // };
 
-// export default SearchBar;
+// export default search-bar;

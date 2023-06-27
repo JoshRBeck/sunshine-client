@@ -38,7 +38,7 @@ function WineListDetails({ wines }) {
   // }, [wines, wineId]);
 
   return (
-    <div className="WineList_Details">
+    <div className="wine-list-details">
       {!foundWine && <h3>Wine not found!</h3>}
       {foundWine && (
         <>

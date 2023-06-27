@@ -1,0 +1,65 @@
+.sign-up-page-heading {
+  color: #7a007a;
+}
+.sign-up-input,
+.add-wine-input,
+.edit-wine-input {
+  border-radius: 25px;
+  border-color: #7a007a;
+  box-shadow: none;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.login-input:hover,
+.sign-up-input:hover,
+.add-wine-input:hover,
+.edit-wine-input:hover {
+  border-color: #7a007a;
+  box-shadow: 0px 0px 5px 10px rgba(175, 2, 161, 0.2);
+  color: black;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.input-labels {
+  color: black;
+  font-weight: 600;
+  font-family: "Vidaloka", serif;
+}
+.error-button,
+.sign-up-button {
+  background: transparent;
+  border: 0px;
+  border-radius: 25px;
+  color: #7a007a;
+  font-weight: 500;
+  font-family: "Vidaloka", serif;
+  font-size: 1.6em;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.already-text {
+  color: black;
+  font-weight: 400;
+  margin-bottom: 4;
+  padding-bottom: 3;
+  padding-top: 3;
+}
+.login-button-signup-page {
+  background: transparent;
+  border: 0px;
+  border-radius: 25px;
+  color: #7a007a;
+  font-family: "Vidaloka", serif;
+  font-size: 1.6em;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+.login-button-signup-page:hover {
+  background-color: #7a007a;
+  box-shadow: -3px 2px 5px 2px rgba(175, 2, 161, 0.2);
+  color: #dfeef9;
+  transition: 1.5s;
+}

@@ -1,0 +1,35 @@
+.login-heading {
+  margin-top: 0px;
+}
+
+input.login-input {
+  box-shadow: none;
+  border-color: #7a007a;
+  border-radius: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.login-button-login-page,
+.signup-button-login-page {
+  background: transparent;
+  border: 0px;
+  border-radius: 25px;
+  color: #7a007a;
+  font-family: "Vidaloka", serif;
+  font-size: 1.6em;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.no-account-text {
+  color: black;
+  font-weight: 500;
+}
+.login-button-login-page:hover,
+.signup-button-login-page:hover {
+  background-color: #7a007a;
+  box-shadow: -3px 2px 5px 2px rgba(175, 2, 161, 0.2);
+  color: #dfeef9;
+  transition: 1.5s;
+}

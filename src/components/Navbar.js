@@ -12,14 +12,14 @@ function Navbar() {
             <nav>
                 {isLoggedIn && (
                     <>
-                        <button onClick={logOutUser} className="logOutButton">Logout</button>
+                        <button onClick={logOutUser} className="log-out-button">Logout</button>
                         <span className="username">{user && user.name}</span>
                     </>
                 )}
                 {!isLoggedIn && (
                     <>
-                        <Link to="/signup"><button className="signUpNavBar">Sign Up</button> </Link>
-                        <Link to="/login"><button className="loginNavBar">Login</button> </Link>
+                        <Link to="/signup"><button className="sign-up-nav-bar">Sign Up</button> </Link>
+                        <Link to="/login"><button className="log-in-nav-bar">Login</button> </Link>
                     </>
                 )}
             </nav>

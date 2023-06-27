@@ -42,13 +42,13 @@ function SignupPage(props) {
 
 
   return (
-    <div className="SignupPage SignupPage--modified">
-      <h1 className="signupPageHeading">Sign Up</h1>
+    <div className="sign-up-page sign-up-page--modified">
+      <h1 className="sign-up-page-heading">Sign Up</h1>
 
       <form onSubmit={handleSignupSubmit}>
-        <label className="inputLabels">Email:</label>
+        <label className="input-labels">Email:</label>
         <input
-          className="signUpInput"
+          className="sign-up-input"
           type="email"
           name="email"
           value={email}
@@ -56,9 +56,9 @@ function SignupPage(props) {
           placeholder="Email"
         />
 
-        <label className="inputLabels">Password:</label>
+        <label className="input-labels">Password:</label>
         <input
-          className="signUpInput"
+          className="sign-up-input"
           type="password"
           name="password"
           value={password}
@@ -66,9 +66,9 @@ function SignupPage(props) {
           placeholder="Password"
         />
 
-        <label className="inputLabels">Name:</label>
+        <label className="input-labels">Name:</label>
         <input
-          className="signUpInput"
+          className="sign-up-input"
           type="text"
           name="name"
           value={name}
@@ -76,13 +76,13 @@ function SignupPage(props) {
           placeholder="Name"
         />
 
-        <button className="signUpButton" type="submit">Sign Up</button>
+        <button className="sign-up-button" type="submit">Sign Up</button>
       </form>
 
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-      <p className="alreadyText">Already have account?</p>
-      <Link to={"/login"}><button className="logInButtonSignUpPage">Login</button></Link>
+      <p className="already-text">Already have account?</p>
+      <Link to={"/login"}><button className="login-button-signup-page">Login</button></Link>
     </div>
   )
 }

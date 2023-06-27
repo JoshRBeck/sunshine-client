@@ -2,6 +2,9 @@ body {
   margin: 0;
   padding-bottom: 50px;
 }
+.App {
+  text-align: center;
+}
 
 a {
   color: #ffffff;
@@ -12,7 +15,7 @@ a {
   display: flex;
   align-items: center;
 }
-.WineListCard_Container p {
+.wine-list-card_Container p {
   margin: 3px;
 }
 
@@ -37,170 +40,6 @@ textarea {
   padding: 10px;
   resize: both;
 }
-/* Nav bar CSS styling */
-nav {
-  background: #000038;
-  border-radius: 0;
-  color: white;
-  margin-bottom: 0px;
-  padding: 0px 20px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-nav li {
-  color: white;
-  font-size: 24px;
-  font-weight: 600;
-  list-style: none;
-}
-.navbar--Modified {
-  position: sticky;
-  border: none;
-  box-shadow: none;
-  padding-bottom: 0;
-  padding-top: 0px;
-}
-.username {
-  font-weight: 700;
-  margin: 5px;
-}
-.signUpNavBar,
-.loginNavBar,
-.logOutButton,
-.logOutNavBar {
-  background: transparent;
-  border: 0;
-  border-radius: 25px;
-  color: white;
-  font-family: "Vidaloka", serif;
-  font-size: 1.6em;
-  font-weight: 500;
-  margin-bottom: 10px;
-  margin-left: 0px;
-}
-.loginNavBar:hover,
-.signUpNavBar:hover,
-.logOutButton:hover,
-.logOutNavBar:hover {
-  background-color: white;
-  box-shadow: -3px 2px 5px 2px rgba(175, 2, 161, 0.2);
-  color: #000038;
-  transition: 1.5s;
-}
-.error-button:hover,
-.logInButtonLoginPage:hover,
-.logInButtonSignUpPage:hover,
-.signupButtonLoginPage:hover,
-.signUpButton:hover,
-.addWineButton:hover {
-  background-color: #7a007a;
-  box-shadow: -3px 2px 5px 2px rgba(175, 2, 161, 0.2);
-  color: #dfeef9;
-  transition: 1.5s;
-}
-
-/* Sign up input fields
-Sign up Page */
-.signupPageHeading {
-  color: #7a007a;
-}
-.signUpInput,
-.addWineInput,
-.editWineInput {
-  border-radius: 25px;
-  border-color: #7a007a;
-  box-shadow: none;
-  font-weight: 500;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-.loginInput:hover,
-.signUpInput:hover,
-.addWineInput:hover,
-.editWineInput:hover {
-  border-color: #7a007a;
-  box-shadow: 0px 0px 5px 10px rgba(175, 2, 161, 0.2);
-  color: #dfeef9;
-  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-.inputLabels {
-  color: black;
-  font-weight: 600;
-  font-family: "Vidaloka", serif;
-}
-.error-button,
-.signUpButton {
-  background: transparent;
-  border: 0px;
-  border-radius: 25px;
-  color: #7a007a;
-  font-weight: 500;
-  font-family: "Vidaloka", serif;
-  font-size: 1.6em;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  padding-bottom: 5px;
-  padding-top: 5px;
-}
-.alreadyText {
-  color: black;
-  font-weight: 400;
-  margin-bottom: 4;
-  padding-bottom: 3;
-  padding-top: 3;
-}
-.logInButtonSignUpPage {
-  background: transparent;
-  border: 0px;
-  border-radius: 25px;
-  color: #7a007a;
-  font-family: "Vidaloka", serif;
-  font-size: 1.6em;
-  font-weight: 500;
-  margin-bottom: 10px;
-  margin-top: 0px;
-}
-/* Log in page styling */
-.loginHeading {
-  margin-top: 0px;
-}
-.loginInput {
-  box-shadow: none;
-  border-color: #7a007a;
-  border-radius: 25px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-.logInButtonLoginPage {
-  background: transparent;
-  border: 0px;
-  border-radius: 25px;
-  color: #7a007a;
-  margin-bottom: 10px;
-  margin-top: 0px;
-  font-family: "Vidaloka", serif;
-  font-size: 1.6em;
-  font-weight: 500;
-}
-.signupButtonLoginPage {
-  background: transparent;
-  border: 0px;
-  border-radius: 25px;
-  color: #7a007a;
-  font-family: "Vidaloka", serif;
-  font-size: 1.6em;
-  font-weight: 500;
-  margin-bottom: 10px;
-  margin-top: 0px;
-}
-.noAccountText {
-  color: black;
-  font-weight: 500;
-}
 /* Card styling */
 .card {
   background: #94a7c8;
@@ -212,16 +51,16 @@ Sign up Page */
   width: 400px;
 }
 
-.ProjectCard h3::after {
+.project-card h3::after {
   content: url("https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/icon-expand.png");
   margin-left: 5px;
 }
 
-.EditProjectPage,
-.AddProject,
-.AddTask,
-.SignupPage,
-.LoginPage {
+.edit-project-page,
+.add-project,
+.add-task,
+.sign-up-page,
+.login-page {
   background: #f9eec3;
   border-radius: 4px;
   margin: 0 auto;
@@ -230,37 +69,37 @@ Sign up Page */
   text-align: center;
   width: 400px;
 }
-.EditProjectPage {
+.edit-project-page {
   background-color: rgb(239, 196, 88);
 }
 
-.SignupPage,
-.LoginPage {
+.sign-up-page,
+.login-page {
   background: transparent;
   color: #7a007a;
   font-family: "Inter", sans-serif;
 }
 
-.EditProjectPage form,
-.AddTask form,
-.AddProject form,
-.SignupPage form,
-.LoginPage form {
+.edit-project-page form,
+.add-task form,
+.add-project form,
+.sign-up-page form,
+.login-page form {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
 
-.AddTask button,
-.AddProject button {
+.add-task button,
+.add-project button {
   display: block;
 }
 
-.TaskCard {
+.task-card {
   background-color: #dfeef9;
 }
 
-.WineListCard_Container {
+.wine-list-card_Container {
   padding: 0 10px;
   margin: 0 15px;
   display: flex;
@@ -268,7 +107,7 @@ Sign up Page */
   justify-content: center;
 }
 
-.WineListCard_Container h2 {
+.wine-list-card_Container h2 {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   left: 2%;
@@ -276,7 +115,7 @@ Sign up Page */
   top: 10%;
 }
 
-.Heading_Container {
+.heading-container {
   align-items: center;
   display: flex;
   margin: 5px 10px;
@@ -284,26 +123,26 @@ Sign up Page */
   justify-content: space-between;
 }
 
-.Heading_Container a {
+.heading-container a {
   left: 2%;
   margin-bottom: 10px;
   position: relative;
   top: 10%;
 }
-.aboutMe {
+.about-me {
   margin-top: 10px;
   font-weight: 500;
 }
-.UserInformation {
+.user-information {
   border: 1px solid black;
 }
 
-.UserDescription {
+.user-description {
   text-align: left;
   margin-left: 15px;
 }
 
-.ProfilePage {
+.profile-page {
   align-content: center;
   background-color: #8d86c9;
   display: flex;
@@ -311,13 +150,13 @@ Sign up Page */
   justify-content: center;
 }
 
-.ProfilePage form {
+.profile-page form {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.profileLabels {
+.profile-labels {
   font-family: "Vidaloka", serif;
 }
 #description,
@@ -341,7 +180,7 @@ Sign up Page */
   color: black;
   transition: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.homeTitle {
+.home-title {
   display: flex;
   margin-bottom: 40px;
   max-height: 70px;
@@ -436,8 +275,8 @@ Sign up Page */
   min-height: 15px;
   margin-bottom: 3px;
 }
-.Searchbar {
-  background-image: url("./assets/searchIcon.png");
+.search-bar {
+  background-image: url("../assets/searchIcon.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top right;
@@ -457,7 +296,7 @@ Sign up Page */
   left: -5px;
 }
 
-.Searchbar:hover {
+.search-bar:hover {
   border-color: #7a007a;
   transition: cubic-bezier(0.165, 0.84, 0.44, 1);
   color: black;
@@ -486,8 +325,8 @@ Sign up Page */
   align-items: center;
   text-align: center;
 }
-.addWineLabel,
-.editWineLabel {
+.add-wine-label,
+.edit-wine-label {
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -498,7 +337,7 @@ Sign up Page */
   padding-bottom: 10px;
   width: 250px;
 }
-.addWineButton {
+.add-wine-button {
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -510,17 +349,17 @@ Sign up Page */
   font-size: 1.6em;
   font-weight: 500;
 }
-.addWineInput {
+.add-wine-input {
   max-height: 45px;
 }
-.attributesLabel {
+.attributes-label {
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: "Vidaloka", serif;
   font-weight: 600;
 }
 
-.OneWine {
+.one-wine {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -530,19 +369,19 @@ Sign up Page */
   color: #f0ebdb;
 }
 
-.WhiteWine {
+.white-wine {
   background-color: #8d86c9;
 }
 
-.RedWine {
+.red-wine {
   background-color: #000038;
 }
 
-.RoseWine {
+.rose-wine {
   background-color: #7a007a;
 }
 
-.WineDetails {
+.wine-details {
   display: flex;
   flex-direction: column;
   font-family: "Inter", sans-serif;
@@ -551,21 +390,21 @@ Sign up Page */
   flex: 2 0 220px;
 }
 
-.WineDetails h3 {
+.wine-details h3 {
   font-size: 20px;
 }
 
-.WineDetailsHeading {
+.wine-details-heading {
   text-decoration: none;
   color: #ffffff;
 }
 
-.WineImage {
+.wine-image {
   display: flex;
   justify-content: center;
 }
 
-.Wine {
+.wine {
   width: 150px;
   height: auto;
 }
@@ -585,117 +424,6 @@ Sign up Page */
   position: fixed;
   bottom: 0;
 }
-/* Detailed wine page */
-
-.top-section {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  justify-content: space-around;
-  border-radius: 30px;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.wine-image img {
-  width: 200px;
-  height: auto;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-}
-
-.wine-info {
-  margin-left: 20px;
-  color: #fdfbff;
-  text-align: center;
-  font-family: "Inter";
-}
-.wine-info p {
-  font-size: 1.5em;
-}
-@media (max-width: 768px) {
-  .wine-info p {
-    font-size: 1em;
-    margin-right: 35px;
-  }
-  .back-button-details {
-    margin-left: 35px;
-  }
-}
-.white-wine {
-  background-color: #8d86c9;
-}
-
-.red-wine {
-  background-color: #000038;
-}
-
-.rosé-wine {
-  background-color: #7a007a;
-}
-.grapes,
-.location,
-.cards {
-  padding-right: 10px;
-  height: 17px;
-  width: 20px;
-}
-.image-and-button {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-}
-.back-button-details {
-  min-height: 25px;
-  min-width: 25px;
-  margin-bottom: 35px;
-  margin-right: 10px;
-}
-button {
-  background: transparent;
-  border: 0;
-}
-.delete-icon,
-.edit-icon {
-  color: #dfeef9;
-  min-height: 25px;
-  min-width: 25px;
-  margin: 13px;
-}
-.wine-attributes {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 25px;
-}
-.wine-attribute-one {
-  background-color: #8d86c9;
-  /* background-image: linear-gradient(#62101f, #3b0710); */
-}
-.wine-attribute-two {
-  background-color: #7a007a;
-  /* background-image: linear-gradient(#feed8c, #d0bc4a); */
-}
-.wine-attribute-one,
-.wine-attribute-two {
-  border-radius: 10px;
-  padding: 10px 5px 10px 5px;
-  width: 175px;
-  height: 50px;
-  font-family: "Inter";
-  color: #fdfbff;
-  font-size: 1.2em;
-}
-.attribute-container {
-  display: flex;
-  flex-direction: column;
-}
-.attribute-value {
-  font-family: "Inter";
-  font-weight: 600;
-  padding: 10px;
-}
 /*error page styling */
 .page-img {
   max-height: 400px;
@@ -710,4 +438,10 @@ button {
   color: #7a007a;
   font-weight: 700;
   margin-top: 30px;
+}
+.error-button:hover {
+  background-color: #7a007a;
+  box-shadow: -3px 2px 5px 2px rgba(175, 2, 161, 0.2);
+  color: #dfeef9;
+  transition: 1.5s;
 }

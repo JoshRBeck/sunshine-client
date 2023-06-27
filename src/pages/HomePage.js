@@ -50,7 +50,7 @@ function HomePage() {
       <div className="wine-list-container">
         <div className="wine-list-intropage">
           <div>
-            <h1 className="homeTitle"><span className="first-span">THE</span><span className="second-span">WINELIST</span></h1>
+            <h1 className="home-title"><span className="first-span">THE</span><span className="second-span">WINELIST</span></h1>
           </div>
           <div>
             {/* <input " type="search" id="site-search" name="site-search" placeholder="Search for a wine" /> */}
@@ -58,7 +58,7 @@ function HomePage() {
               <div className="search-bar">
                 <input
                   value={search}
-                  className="Searchbar"
+                  className="search-bar"
                   placeholder="Search for a wine"
                   onChange={handleSearch}
                 />
